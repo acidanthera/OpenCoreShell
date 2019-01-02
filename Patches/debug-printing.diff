@@ -1,0 +1,17 @@
+This patch enables debug printing in DEBUG builds for improved error detection.
+
+diff --git a/ShellPkg/ShellPkg.dsc b/ShellPkg/ShellPkg.dsc
+index 1c923f58..250c2002 100644
+--- a/ShellPkg/ShellPkg.dsc
++++ b/ShellPkg/ShellPkg.dsc
+@@ -79,6 +79,10 @@
+ 
+ [PcdsFixedAtBuild]
+   gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask|0xFF
++!if $(TARGET) == DEBUG
++  gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0xFFFFFFFF
++  gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel|0xFFFFFFFF
++!endif
+   gEfiMdePkgTokenSpaceGuid.PcdUefiLibMaxPrintBufferSize|16000
+ !ifdef $(NO_SHELL_PROFILES)
+   gEfiShellPkgTokenSpaceGuid.PcdShellProfileMask|0x00

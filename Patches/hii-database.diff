@@ -1,0 +1,270 @@
+This patch implements Hii support for very old firmwares, like Apple Mac prior to Skylake and Insyde.
+Note, that on Apple Mac CreateEventEx API is not available, so we removed some of the code.
+Impl suffixes work around name collisions between the driver and the library.
+
+diff --git a/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.c b/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.c
+index bd3a1256..662afd09 100644
+--- a/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.c
++++ b/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.c
+@@ -27,6 +27,16 @@
+ #include <Protocol/HiiDatabase.h>
+ #include <Protocol/HiiConfigRouting.h>
+ 
++///
++/// Glued legacy Hii Database initializer
++///
++EFI_STATUS
++EFIAPI
++InitializeHiiDatabase (
++  IN EFI_HANDLE           ImageHandle,
++  IN EFI_SYSTEM_TABLE     *SystemTable
++  );
++
+ ///
+ /// Pointer to the UEFI HII Font Protocol
+ ///
+@@ -85,6 +95,14 @@ UefiHiiServicesLibConstructor (
+   // Retrieve the pointer to the UEFI HII String Protocol 
+   //
+   Status = gBS->LocateProtocol (&gEfiHiiStringProtocolGuid, NULL, (VOID **) &gHiiString);
++  if (EFI_ERROR (Status)) {
++    //
++    // Load legacy HiiDatabase if none is available
++    //
++    Status = InitializeHiiDatabase (ImageHandle, SystemTable);
++    ASSERT_EFI_ERROR (Status);
++    Status = gBS->LocateProtocol (&gEfiHiiStringProtocolGuid, NULL, (VOID **) &gHiiString);
++  }
+   ASSERT_EFI_ERROR (Status);
+ 
+   //
+diff --git a/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf b/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
+index a009e9a7..3228be96 100644
+--- a/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
++++ b/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
+@@ -30,11 +30,25 @@
+ 
+ [Sources]
+   UefiHiiServicesLib.c
++  ../../Universal/HiiDatabaseDxe/HiiDatabaseEntry.c
++  ../../Universal/HiiDatabaseDxe/Image.c
++  ../../Universal/HiiDatabaseDxe/ImageEx.c
++  ../../Universal/HiiDatabaseDxe/HiiDatabase.h
++  ../../Universal/HiiDatabaseDxe/ConfigRouting.c
++  ../../Universal/HiiDatabaseDxe/String.c
++  ../../Universal/HiiDatabaseDxe/Database.c
++  ../../Universal/HiiDatabaseDxe/Font.c
++  ../../Universal/HiiDatabaseDxe/ConfigKeywordHandler.c
+ 
+ [Packages]
+   MdePkg/MdePkg.dec
+   MdeModulePkg/MdeModulePkg.dec
+ 
++[Pcd]
++  gEfiMdeModulePkgTokenSpaceGuid.PcdSupportHiiImageProtocol   ## CONSUMES
++  gEfiMdeModulePkgTokenSpaceGuid.PcdHiiOsRuntimeSupport       ## CONSUMES
++  gEfiMdePkgTokenSpaceGuid.PcdUefiVariableDefaultPlatformLang ## CONSUMES
++  gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer ## CONSUMES
+ [LibraryClasses]
+   UefiBootServicesTableLib
+   DebugLib
+@@ -45,6 +59,15 @@
+   gEfiHiiImageProtocolGuid            ## SOMETIMES_CONSUMES
+   gEfiHiiDatabaseProtocolGuid         ## CONSUMES
+   gEfiHiiConfigRoutingProtocolGuid    ## CONSUMES
++  gEfiHiiConfigAccessProtocolGuid      ## SOMETIMES_CONSUMES
++  gEfiConfigKeywordHandlerProtocolGuid ## SOMETIMES_CONSUMES
++  gEfiHiiImageDecoderProtocolGuid      ## SOMETIMES_CONSUMES
++  gEfiHiiImageExProtocolGuid           ## SOMETIMES_CONSUMES
++
++[Guids]
++  gEfiHiiKeyBoardLayoutGuid            ## SOMETIMES_CONSUMES
++  gEfiHiiImageDecoderNameJpegGuid      ## SOMETIMES_CONSUMES
++  gEfiHiiImageDecoderNamePngGuid       ## SOMETIMES_CONSUMES
+ 
+ [Depex.common.DXE_DRIVER]
+   gEfiHiiStringProtocolGuid        AND
+diff --git a/MdeModulePkg/Universal/HiiDatabaseDxe/ConfigRouting.c b/MdeModulePkg/Universal/HiiDatabaseDxe/ConfigRouting.c
+index 646864f4..905014e8 100644
+--- a/MdeModulePkg/Universal/HiiDatabaseDxe/ConfigRouting.c
++++ b/MdeModulePkg/Universal/HiiDatabaseDxe/ConfigRouting.c
+@@ -1489,7 +1489,7 @@ Error:
+   @retval FALSE  This Var is not in the block range.
+ **/
+ BOOLEAN
+-BlockArrayCheck (
++BlockArrayCheckImpl (
+   IN IFR_BLOCK_DATA  *RequestBlockArray,
+   IN UINT16          VarOffset,
+   IN UINT16          VarWidth,
+@@ -1753,7 +1753,7 @@ Done:
+ 
+ **/
+ BOOLEAN
+-GetElementsFromRequest (
++GetElementsFromRequestImpl (
+   IN EFI_STRING    ConfigRequest
+   )
+ {
+@@ -2018,7 +2018,7 @@ IsThisOpcodeRequired (
+     //
+     // Check whether this question is in requested block array.
+     //
+-    if (!BlockArrayCheck (RequestBlockArray, NameId, 0, TRUE, HiiHandle)) {
++    if (!BlockArrayCheckImpl (RequestBlockArray, NameId, 0, TRUE, HiiHandle)) {
+       //
+       // This question is not in the requested string. Skip it.
+       //
+@@ -2046,7 +2046,7 @@ IsThisOpcodeRequired (
+     //
+     // Check whether this question is in requested block array.
+     //
+-    if (!BlockArrayCheck (RequestBlockArray, VarOffset, VarWidth, FALSE, HiiHandle)) {
++    if (!BlockArrayCheckImpl (RequestBlockArray, VarOffset, VarWidth, FALSE, HiiHandle)) {
+       //
+       // This question is not in the requested string. Skip it.
+       //
+@@ -2860,7 +2860,7 @@ ParseIfrData (
+         //
+         // Check whether this question is in requested block array.
+         //
+-        if (!BlockArrayCheck (RequestBlockArray, BlockData->Offset, BlockData->Width, (BOOLEAN)(BlockData->Name != NULL), HiiHandle)) {
++        if (!BlockArrayCheckImpl (RequestBlockArray, BlockData->Offset, BlockData->Width, (BOOLEAN)(BlockData->Name != NULL), HiiHandle)) {
+           //
+           // This question is not in the requested string. Skip it.
+           //
+@@ -4869,7 +4869,7 @@ HiiConfigRoutingExtractConfig (
+     // Check whether ConfigRequest contains request string.
+     //
+     IfrDataParsedFlag = FALSE;
+-    if ((HiiHandle != NULL) && !GetElementsFromRequest(ConfigRequest)) {
++    if ((HiiHandle != NULL) && !GetElementsFromRequestImpl(ConfigRequest)) {
+       //
+       // Get the full request string from IFR when HiiPackage is registered to HiiHandle 
+       //
+@@ -4887,7 +4887,7 @@ HiiConfigRoutingExtractConfig (
+       //
+       // Not any request block is found.
+       //
+-      if (!GetElementsFromRequest(ConfigRequest)) {
++      if (!GetElementsFromRequestImpl(ConfigRequest)) {
+         AccessResults = AllocateCopyPool (StrSize (ConfigRequest), ConfigRequest);
+         goto NextConfigString;
+       }
+@@ -5227,7 +5227,7 @@ HiiConfigRoutingExportConfig (
+         if (StringPtr != NULL) {
+           *StringPtr = 0;
+         }
+-        if (GetElementsFromRequest (AccessResults)) {
++        if (GetElementsFromRequestImpl (AccessResults)) {
+           Status = GetFullStringFromHiiFormPackages (Database, DevicePath, &AccessResults, &DefaultResults, NULL);
+           ASSERT_EFI_ERROR (Status);
+         }
+diff --git a/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabase.h b/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabase.h
+index 8336dd0f..dd125f79 100644
+--- a/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabase.h
++++ b/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabase.h
+@@ -1374,7 +1374,7 @@ HiiNewString (
+ **/
+ EFI_STATUS
+ EFIAPI
+-HiiGetString (
++HiiGetStringImpl (
+   IN  CONST EFI_HII_STRING_PROTOCOL   *This,
+   IN  CONST CHAR8                     *Language,
+   IN  EFI_HII_HANDLE                  PackageList,
+@@ -1409,7 +1409,7 @@ HiiGetString (
+ **/
+ EFI_STATUS
+ EFIAPI
+-HiiSetString (
++HiiSetStringImpl (
+   IN CONST EFI_HII_STRING_PROTOCOL    *This,
+   IN EFI_HII_HANDLE                   PackageList,
+   IN EFI_STRING_ID                    StringId,
+diff --git a/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseEntry.c b/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseEntry.c
+index 9d09c60b..d939e113 100644
+--- a/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseEntry.c
++++ b/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseEntry.c
+@@ -55,8 +55,8 @@ HII_DATABASE_PRIVATE_DATA mPrivate = {
+   },
+   {
+     HiiNewString,
+-    HiiGetString,
+-    HiiSetString,
++    HiiGetStringImpl,
++    HiiSetStringImpl,
+     HiiGetLanguages,
+     HiiGetSecondaryLanguages
+   },
+@@ -175,7 +175,6 @@ InitializeHiiDatabase (
+ {
+   EFI_STATUS                             Status;
+   EFI_HANDLE                             Handle;
+-  EFI_EVENT                              ReadyToBootEvent;
+ 
+   //
+   // There will be only one HII Database in the system
+@@ -194,21 +193,6 @@ InitializeHiiDatabase (
+   InitializeListHead (&mPrivate.HiiHandleList);
+   InitializeListHead (&mPrivate.FontInfoList);
+ 
+-  //
+-  // Create a event with EFI_HII_SET_KEYBOARD_LAYOUT_EVENT_GUID group type.
+-  //
+-  Status = gBS->CreateEventEx (
+-                  EVT_NOTIFY_SIGNAL,
+-                  TPL_NOTIFY,
+-                  KeyboardLayoutChangeNullEvent,
+-                  NULL,
+-                  &gEfiHiiKeyBoardLayoutGuid,
+-                  &gHiiKeyboardLayoutChanged
+-                  );
+-  if (EFI_ERROR (Status)) {
+-    return Status;
+-  }
+-
+   Handle = NULL;
+   Status = gBS->InstallMultipleProtocolInterfaces (
+                   &Handle,
+@@ -239,18 +223,6 @@ InitializeHiiDatabase (
+ 
+   }
+ 
+-  if (FeaturePcdGet(PcdHiiOsRuntimeSupport)) {
+-    Status = EfiCreateEventReadyToBootEx (
+-               TPL_CALLBACK,
+-               OnReadyToBoot,
+-               NULL,
+-               &ReadyToBootEvent
+-               );
+-    if (EFI_ERROR (Status)) {
+-      return Status;
+-    }
+-  }
+-
+   return Status;
+ }
+ 
+diff --git a/MdeModulePkg/Universal/HiiDatabaseDxe/String.c b/MdeModulePkg/Universal/HiiDatabaseDxe/String.c
+index d5a7488a..2428c0ef 100644
+--- a/MdeModulePkg/Universal/HiiDatabaseDxe/String.c
++++ b/MdeModulePkg/Universal/HiiDatabaseDxe/String.c
+@@ -1612,7 +1612,7 @@ Done:
+ **/
+ EFI_STATUS
+ EFIAPI
+-HiiGetString (
++HiiGetStringImpl (
+   IN  CONST EFI_HII_STRING_PROTOCOL   *This,
+   IN  CONST CHAR8                     *Language,
+   IN  EFI_HII_HANDLE                  PackageList,
+@@ -1713,7 +1713,7 @@ HiiGetString (
+ **/
+ EFI_STATUS
+ EFIAPI
+-HiiSetString (
++HiiSetStringImpl (
+   IN CONST EFI_HII_STRING_PROTOCOL    *This,
+   IN EFI_HII_HANDLE                   PackageList,
+   IN EFI_STRING_ID                    StringId,

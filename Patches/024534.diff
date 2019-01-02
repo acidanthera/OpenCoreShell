@@ -1,0 +1,35 @@
+EFI_RUNTIME_SERVICES.GetTime() might return an unspecified Timezone,
+such as when SetTime() has not been called after the PC-AT CMOS RTC
+was cut off power. Consider this case by not attempting Timezone
+translations for when it is invalid.
+
+Contributed-under: TianoCore Contribution Agreement 1.1
+Signed-off-by: Marvin Haeuser <Marvin.Haeuser at outlook.com>
+---
+ ShellPkg/Library/UefiShellLevel2CommandsLib/Ls.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/ShellPkg/Library/UefiShellLevel2CommandsLib/Ls.c b/ShellPkg/Library/UefiShellLevel2CommandsLib/Ls.c
+index 7d2e15f5206b..73804b4516ba 100644
+--- a/ShellPkg/Library/UefiShellLevel2CommandsLib/Ls.c
++++ b/ShellPkg/Library/UefiShellLevel2CommandsLib/Ls.c
+@@ -2,7 +2,7 @@
+   Main file for ls shell level 2 function.
+ 
+   (C) Copyright 2013-2015 Hewlett-Packard Development Company, L.P.<BR>
+-  Copyright (c) 2009 - 2017, Intel Corporation. All rights reserved.<BR>
++  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
+   This program and the accompanying materials
+   are licensed and made available under the terms and conditions of the BSD License
+   which accompanies this distribution.  The full text of the license may be found at
+@@ -506,7 +506,7 @@ PrintLsOutput(
+       // Change the file time to local time.
+       //
+       Status = gRT->GetTime(&LocalTime, NULL);
+-      if (!EFI_ERROR (Status)) {
++      if (!EFI_ERROR (Status) && (LocalTime.TimeZone != EFI_UNSPECIFIED_TIMEZONE)) {
+         if ((Node->Info->CreateTime.TimeZone != EFI_UNSPECIFIED_TIMEZONE) &&
+             (Node->Info->CreateTime.Month >= 1 && Node->Info->CreateTime.Month <= 12)) {
+           //
+-- 
+2.17.0.windows.1

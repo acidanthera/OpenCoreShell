@@ -1,0 +1,71 @@
+The current implementation of the FileHandleGetFileName() function
+assumes that the Root directory always has the FileName '\0'.
+However, the only requirement the UEFI specification defines is that
+a prepended '\\' must be supported to access files and folders
+relative to the Root directory.
+This patch removes this assumption and supports constructing valid
+paths for any value of FileName for the Root Directory.
+
+In practice, this fixes compatibility issues with File System drivers
+that report '\\' as the FileName of the Root directory, which
+currently is both generating an invalid path ("\\\\") and resulting
+in an EFI_NOT_FOUND result from the CurrentHandle->Open() call.
+
+Contributed-under: TianoCore Contribution Agreement 1.1
+Signed-off-by: Marvin Haeuser <Marvin.Haeuser at outlook.com>
+---
+ MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.c | 29 ++++++++++++++------
+ 1 file changed, 20 insertions(+), 9 deletions(-)
+
+diff --git a/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.c b/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.c
+index 57aad77bc135..820801422996 100644
+--- a/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.c
++++ b/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.c
+@@ -820,10 +820,25 @@ FileHandleGetFileName (
+         Status = EFI_OUT_OF_RESOURCES;
+         break;
+       } else {
++        //
++        // Prepare to move to the parent directory.
++        // Also determine whether CurrentHandle refers to the Root directory.
++        //
++        Status = CurrentHandle->Open (CurrentHandle, &NextHigherHandle, L"..", EFI_FILE_MODE_READ, 0);
+         //
+         // We got info... do we have a name? if yes precede the current path with it...
+         //
+-        if (StrLen (FileInfo->FileName) == 0) {
++        if ((StrLen (FileInfo->FileName) == 0) || EFI_ERROR (Status)) {
++          //
++          // Both FileInfo->FileName being '\0' and EFI_ERROR() suggest that
++          // CurrentHandle refers to the Root directory.  As this loop ensures
++          // FullFileName is starting with '\\' at all times, signal success
++          // and exit the loop.
++          // While FileInfo->FileName could theoretically be a value other than
++          // '\0' or '\\', '\\' is guaranteed to be supported by the
++          // specification and hence its value can safely be ignored.
++          //
++          Status = EFI_SUCCESS;
+           if (*FullFileName == NULL) {
+             ASSERT((*FullFileName == NULL && Size == 0) || (*FullFileName != NULL));
+             *FullFileName = StrnCatGrowLeft(FullFileName, &Size, L"\\", 0);
+@@ -841,15 +856,11 @@ FileHandleGetFileName (
+           FreePool(FileInfo);
+         }
+       }
+-      //
+-      // Move to the parent directory
+-      //
+-      Status = CurrentHandle->Open (CurrentHandle, &NextHigherHandle, L"..", EFI_FILE_MODE_READ, 0);
+-      if (EFI_ERROR (Status)) {
+-        break;
+-      }
+ 
+       FileHandleClose(CurrentHandle);
++      //
++      // Move to the parent directory
++      //
+       CurrentHandle = NextHigherHandle;
+     }
+   } else if (Status == EFI_NOT_FOUND) {
+-- 
+2.17.0.windows.1

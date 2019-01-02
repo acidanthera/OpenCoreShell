@@ -1,0 +1,26 @@
+This patch works around an assertion and init error for the firmwares that do not have EFI_DEVICE_PATH_UTILITIES_PROTOCOL,
+for example, Apple Mac prior to Skylake.
+
+diff --git a/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol.c b/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol.c
+index 9580e397..587565fe 100644
+--- a/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol.c
++++ b/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol.c
+@@ -47,16 +47,12 @@ UefiDevicePathLibOptionalDevicePathProtocolConstructor (
+   IN      EFI_SYSTEM_TABLE          *SystemTable
+   )
+ {
+-  EFI_STATUS                        Status;
+-
+-  Status = gBS->LocateProtocol (
++  gBS->LocateProtocol (
+                   &gEfiDevicePathUtilitiesProtocolGuid,
+                   NULL,
+                   (VOID**) &mDevicePathLibDevicePathUtilities
+                   );
+-  ASSERT_EFI_ERROR (Status);
+-  ASSERT (mDevicePathLibDevicePathUtilities != NULL);
+-  return Status;
++  return EFI_SUCCESS;
+ }
+ 
+ /**
