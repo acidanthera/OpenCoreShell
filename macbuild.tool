@@ -41,7 +41,7 @@ package() {
   cp Shell.efi tmp/Tools/ || exit 1
   echo "$3" > tmp/UDK.hash || exit 1
   pushd tmp || exit 1
-  zip -qry -FS ../"OpenCoreShell-v${PKGVER}-${2}.zip" * || exit 1
+  zip -qry -FS ../"OpenCoreShell-${PKGVER}-${2}.zip" * || exit 1
   popd || exit 1
   rm -rf tmp || exit 1
   popd || exit 1
