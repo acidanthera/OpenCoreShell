@@ -5,7 +5,7 @@ pushd "$BUILDDIR" >/dev/null
 BUILDDIR=$(pwd)
 popd >/dev/null
 
-PKGVER="1.0.1"
+PKGVER="1.0.2"
 
 cd "$BUILDDIR"
 
