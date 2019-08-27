@@ -1,5 +1,5 @@
 This patch implements unicode collation fallback for firmwares that set PlatformLang to local language (e.g. ru-RU),
-yet do not support unicode collation prootocol or support it exclusively for en or en-US.
+yet do not support unicode collation protocol or support it exclusively for en or en-US.
 Discovered on Haswell GIGABYTE APTIO IV.
 
 diff --git a/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib.c b/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib.c
