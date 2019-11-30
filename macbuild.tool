@@ -121,9 +121,9 @@ if [ ! -f UDK/UDK.ready ]; then
   rm -rf UDK
 fi
 
-updaterepo "https://github.com/tianocore/edk2" UDK UDK2018 || exit 1
+updaterepo "https://github.com/acidanthera/audk" UDK master || exit 1
 cd UDK
-HASH=$(git rev-parse origin/UDK2018)
+HASH=$(git rev-parse origin/master)
 
 source edksetup.sh || exit 1
 
