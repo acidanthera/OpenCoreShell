@@ -38,7 +38,7 @@ package() {
   pushd "$1" || exit 1
   rm -rf tmp || exit 1
   mkdir -p tmp/Tools || exit 1
-  cp Shell.efi tmp/Tools/ || exit 1
+  cp Shell_EA4BB293-2D7F-4456-A681-1F22F42CD0BC.efi tmp/Tools/Shell.efi || exit 1
   echo "$3" > tmp/UDK.hash || exit 1
   pushd tmp || exit 1
   zip -qry -FS ../"OpenCoreShell-${PKGVER}-${2}.zip" * || exit 1
@@ -134,7 +134,7 @@ fi
 
 if [ ! -f patches.ready ]; then
   for i in ../Patches/* ; do
-    git apply "$i" || exit 1
+    git apply "$i" --whitespace=fix || exit 1
     git add * || exit 1
     git commit -m "Applied patch $i" || exit 1
   done
@@ -155,10 +155,10 @@ cd .. || exit 1
 
 if [ "$SKIP_PACKAGE" != "1" ]; then
   if [ "$PACKAGE" = "" ] || [ "$PACKAGE" = "DEBUG" ]; then
-    package "Binaries/DEBUG" "DEBUG" "$HASH" || exit 1
+    package "Binaries/DEBUG" "DEBUG" || exit 1
   fi
 
   if [ "$PACKAGE" = "" ] || [ "$PACKAGE" = "RELEASE" ]; then
-    package "Binaries/RELEASE" "RELEASE" "$HASH" || exit 1
+    package "Binaries/RELEASE" "RELEASE" || exit 1
   fi
 fi
