@@ -155,10 +155,10 @@ cd .. || exit 1
 
 if [ "$SKIP_PACKAGE" != "1" ]; then
   if [ "$PACKAGE" = "" ] || [ "$PACKAGE" = "DEBUG" ]; then
-    package "Binaries/DEBUG" "DEBUG" || exit 1
+    package "Binaries/DEBUG" "DEBUG" "$HASH" || exit 1
   fi
 
   if [ "$PACKAGE" = "" ] || [ "$PACKAGE" = "RELEASE" ]; then
-    package "Binaries/RELEASE" "RELEASE" || exit 1
+    package "Binaries/RELEASE" "RELEASE" "$HASH" || exit 1
   fi
 fi
