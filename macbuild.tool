@@ -5,7 +5,7 @@ pushd "$BUILDDIR" >/dev/null
 BUILDDIR=$(pwd)
 popd >/dev/null
 
-PKGVER="1.0.2"
+PKGVER="1.0.3"
 
 cd "$BUILDDIR"
 
@@ -38,7 +38,7 @@ package() {
   pushd "$1" || exit 1
   rm -rf tmp || exit 1
   mkdir -p tmp/Tools || exit 1
-  cp Shell.efi tmp/Tools/ || exit 1
+  cp Shell_EA4BB293-2D7F-4456-A681-1F22F42CD0BC.efi tmp/Tools/Shell.efi || exit 1
   echo "$3" > tmp/UDK.hash || exit 1
   pushd tmp || exit 1
   zip -qry -FS ../"OpenCoreShell-${PKGVER}-${2}.zip" * || exit 1

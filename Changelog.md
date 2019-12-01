@@ -1,6 +1,9 @@
 OpenCoreShell changelog
 =======================
 
+#### v1.0.3
+- Upgraded to edk2-stable201911 base
+
 #### v1.0.2
 - Unified archive names
 
