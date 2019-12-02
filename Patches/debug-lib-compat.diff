@@ -1,0 +1,21 @@
+This patch avoids the use of CreateEventEx, which is missing on MacBookPro12,1.
+
+diff --git a/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c b/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
+index ed73f92..b4ac17c 100644
+--- a/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
++++ b/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
+@@ -64,12 +64,11 @@ DxeDebugLibConstructor(
+ {
+   mDebugST = SystemTable;
+ 
+-  SystemTable->BootServices->CreateEventEx (
+-                                EVT_NOTIFY_SIGNAL,
++  SystemTable->BootServices->CreateEvent (
++                                EVT_SIGNAL_EXIT_BOOT_SERVICES,
+                                 TPL_NOTIFY,
+                                 ExitBootServicesCallback,
+                                 NULL,
+-                                &gEfiEventExitBootServicesGuid,
+                                 &mExitBootServicesEvent
+                                 );
+ 
