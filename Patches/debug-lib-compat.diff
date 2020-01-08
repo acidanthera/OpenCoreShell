@@ -1,7 +1,178 @@
-This patch avoids the use of CreateEventEx, which is missing on MacBookPro12,1.
+From 624bcf4fd337c9e785b2972ecb19c68e7a26f7d1 Mon Sep 17 00:00:00 2001
+From: Vitaly Cheptsov <vit9696@protonmail.com>
+Date: Fri, 3 Jan 2020 21:00:10 +0300
+Subject: [PATCH v2 1/1] MdePkg: Do not use CreateEventEx unless required
 
+REF: https://bugzilla.tianocore.org/show_bug.cgi?id=2446
+
+There are many firmwares in the wild not supporting CreateEventEx,
+including devices less than 5 years old.
+
+Signed-off-by: Vitaly Cheptsov <vit9696@protonmail.com>
+---
+ MdePkg/Library/DxeRuntimeDebugLibSerialPort/DxeRuntimeDebugLibSerialPort.inf   |  3 ---
+ MdePkg/Library/DxeRuntimePciExpressLib/DxeRuntimePciExpressLib.inf             |  4 ----
+ MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLibSegmentInfo.inf |  3 ---
+ MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf                       |  3 ---
+ MdePkg/Library/UefiDebugLibDebugPortProtocol/UefiDebugLibDebugPortProtocol.inf |  3 ---
+ MdePkg/Library/UefiDebugLibStdErr/UefiDebugLibStdErr.inf                       |  3 ---
+ MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf                               |  5 -----
+ MdePkg/Library/DxeRuntimeDebugLibSerialPort/DebugLib.c                         |  3 +--
+ MdePkg/Library/DxeRuntimePciExpressLib/PciExpressLib.c                         |  5 ++---
+ MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLib.c              |  5 ++---
+ MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c                        |  5 ++---
+ MdePkg/Library/UefiDebugLibDebugPortProtocol/DebugLibConstructor.c             |  5 ++---
+ MdePkg/Library/UefiDebugLibStdErr/DebugLibConstructor.c                        |  5 ++---
+ MdePkg/Library/UefiRuntimeLib/RuntimeLib.c                                     | 10 ++++------
+ 14 files changed, 15 insertions(+), 47 deletions(-)
+
+diff --git a/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DxeRuntimeDebugLibSerialPort.inf b/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DxeRuntimeDebugLibSerialPort.inf
+index 655c1c14c1..31d169ad7c 100644
+--- a/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DxeRuntimeDebugLibSerialPort.inf
++++ b/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DxeRuntimeDebugLibSerialPort.inf
+@@ -41,9 +41,6 @@ [LibraryClasses]
+   PrintLib
+   SerialPortLib
+ 
+-[Guids]
+-  gEfiEventExitBootServicesGuid                         ## CONSUMES ## Event
+-
+ [Pcd]
+   gEfiMdePkgTokenSpaceGuid.PcdDebugClearMemoryValue     ## SOMETIMES_CONSUMES
+   gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask         ## CONSUMES
+diff --git a/MdePkg/Library/DxeRuntimePciExpressLib/DxeRuntimePciExpressLib.inf b/MdePkg/Library/DxeRuntimePciExpressLib/DxeRuntimePciExpressLib.inf
+index 45bfe9dc6f..8d2ba1d187 100644
+--- a/MdePkg/Library/DxeRuntimePciExpressLib/DxeRuntimePciExpressLib.inf
++++ b/MdePkg/Library/DxeRuntimePciExpressLib/DxeRuntimePciExpressLib.inf
+@@ -47,7 +47,3 @@ [LibraryClasses]
+ 
+ [Pcd]
+   gEfiMdePkgTokenSpaceGuid.PcdPciExpressBaseAddress  ## CONSUMES
+-
+-[Guids]
+-  gEfiEventVirtualAddressChangeGuid         ## CONSUMES ## Event
+-
+diff --git a/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLibSegmentInfo.inf b/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLibSegmentInfo.inf
+index f6445f4abb..ae9f11b697 100644
+--- a/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLibSegmentInfo.inf
++++ b/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLibSegmentInfo.inf
+@@ -45,6 +45,3 @@ [LibraryClasses]
+   MemoryAllocationLib
+   DxeServicesTableLib
+   UefiBootServicesTableLib
+-
+-[Guids]
+-  gEfiEventVirtualAddressChangeGuid         ## CONSUMES ## Event
+diff --git a/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf b/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
+index b577d52ac6..53bbc8ce3f 100644
+--- a/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
++++ b/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
+@@ -46,9 +46,6 @@ [LibraryClasses]
+   PrintLib
+   DebugPrintErrorLevelLib
+ 
+-[Guids]
+-  gEfiEventExitBootServicesGuid                 ## CONSUMES
+-
+ [Pcd]
+   gEfiMdePkgTokenSpaceGuid.PcdDebugClearMemoryValue        ## SOMETIMES_CONSUMES
+   gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask            ## CONSUMES
+diff --git a/MdePkg/Library/UefiDebugLibDebugPortProtocol/UefiDebugLibDebugPortProtocol.inf b/MdePkg/Library/UefiDebugLibDebugPortProtocol/UefiDebugLibDebugPortProtocol.inf
+index ff09a12ce4..e12a1025c6 100644
+--- a/MdePkg/Library/UefiDebugLibDebugPortProtocol/UefiDebugLibDebugPortProtocol.inf
++++ b/MdePkg/Library/UefiDebugLibDebugPortProtocol/UefiDebugLibDebugPortProtocol.inf
+@@ -46,9 +46,6 @@ [LibraryClasses]
+   PrintLib
+   DebugPrintErrorLevelLib
+ 
+-[Guids]
+-  gEfiEventExitBootServicesGuid                 ## CONSUMES
+-
+ [Protocols]
+   gEfiDebugPortProtocolGuid                     ## CONSUMES
+ 
+diff --git a/MdePkg/Library/UefiDebugLibStdErr/UefiDebugLibStdErr.inf b/MdePkg/Library/UefiDebugLibStdErr/UefiDebugLibStdErr.inf
+index 11f7594626..5ecb971a0a 100644
+--- a/MdePkg/Library/UefiDebugLibStdErr/UefiDebugLibStdErr.inf
++++ b/MdePkg/Library/UefiDebugLibStdErr/UefiDebugLibStdErr.inf
+@@ -44,9 +44,6 @@ [LibraryClasses]
+   PrintLib
+   DebugPrintErrorLevelLib
+ 
+-[Guids]
+-  gEfiEventExitBootServicesGuid                 ## CONSUMES
+-
+ [Pcd]
+   gEfiMdePkgTokenSpaceGuid.PcdDebugClearMemoryValue   ## SOMETIMES_CONSUMES
+   gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask       ## CONSUMES
+diff --git a/MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf b/MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf
+index 5527f9f02f..cc4ee15110 100644
+--- a/MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf
++++ b/MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf
+@@ -39,8 +39,3 @@ [LibraryClasses]
+   UefiBootServicesTableLib
+   UefiRuntimeServicesTableLib
+   DebugLib
+-
+-[Guids]
+-  gEfiEventExitBootServicesGuid             ## CONSUMES ## Event
+-  gEfiEventVirtualAddressChangeGuid         ## CONSUMES ## Event
+-
+diff --git a/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DebugLib.c b/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DebugLib.c
+index 862c6bff09..cc79843b1c 100644
+--- a/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DebugLib.c
++++ b/MdePkg/Library/DxeRuntimeDebugLibSerialPort/DebugLib.c
+@@ -77,9 +77,8 @@ DxeRuntimeDebugLibSerialPortConstructor (
+     return Status;
+   }
+ 
+-  return SystemTable->BootServices->CreateEventEx (EVT_NOTIFY_SIGNAL,
++  return SystemTable->BootServices->CreateEvent (EVT_SIGNAL_EXIT_BOOT_SERVICES,
+                                       TPL_NOTIFY, ExitBootServicesEvent, NULL,
+-                                      &gEfiEventExitBootServicesGuid,
+                                       &mEfiExitBootServicesEvent);
+ }
+ 
+diff --git a/MdePkg/Library/DxeRuntimePciExpressLib/PciExpressLib.c b/MdePkg/Library/DxeRuntimePciExpressLib/PciExpressLib.c
+index 6e784763be..7e5852e641 100644
+--- a/MdePkg/Library/DxeRuntimePciExpressLib/PciExpressLib.c
++++ b/MdePkg/Library/DxeRuntimePciExpressLib/PciExpressLib.c
+@@ -124,12 +124,11 @@ DxeRuntimePciExpressLibConstructor (
+   //
+   // Register SetVirtualAddressMap () notify function
+   //
+-  Status = gBS->CreateEventEx (
+-                  EVT_NOTIFY_SIGNAL,
++  Status = gBS->CreateEvent (
++                  EVT_SIGNAL_VIRTUAL_ADDRESS_CHANGE,
+                   TPL_NOTIFY,
+                   DxeRuntimePciExpressLibVirtualNotify,
+                   NULL,
+-                  &gEfiEventVirtualAddressChangeGuid,
+                   &mDxeRuntimePciExpressLibVirtualNotifyEvent
+                   );
+   ASSERT_EFI_ERROR (Status);
+diff --git a/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLib.c b/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLib.c
+index 2f503ecffe..b0dbdec0cf 100644
+--- a/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLib.c
++++ b/MdePkg/Library/PciSegmentLibSegmentInfo/DxeRuntimePciSegmentLib.c
+@@ -109,12 +109,11 @@ DxeRuntimePciSegmentLibConstructor (
+   //
+   // Register SetVirtualAddressMap () notify function
+   //
+-  Status = gBS->CreateEventEx (
+-                  EVT_NOTIFY_SIGNAL,
++  Status = gBS->CreateEvent (
++                  EVT_SIGNAL_VIRTUAL_ADDRESS_CHANGE,
+                   TPL_NOTIFY,
+                   DxeRuntimePciSegmentLibVirtualNotify,
+                   NULL,
+-                  &gEfiEventVirtualAddressChangeGuid,
+                   &mDxeRuntimePciSegmentLibVirtualNotifyEvent
+                   );
+   ASSERT_EFI_ERROR (Status);
 diff --git a/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c b/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
-index ed73f92..b4ac17c 100644
+index ed73f92818..b4ac17cf55 100644
 --- a/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
 +++ b/MdePkg/Library/UefiDebugLibConOut/DebugLibConstructor.c
 @@ -64,12 +64,11 @@ DxeDebugLibConstructor(
@@ -19,3 +190,76 @@ index ed73f92..b4ac17c 100644
                                  &mExitBootServicesEvent
                                  );
  
+diff --git a/MdePkg/Library/UefiDebugLibDebugPortProtocol/DebugLibConstructor.c b/MdePkg/Library/UefiDebugLibDebugPortProtocol/DebugLibConstructor.c
+index 6ea0912f2b..96fc1c422f 100644
+--- a/MdePkg/Library/UefiDebugLibDebugPortProtocol/DebugLibConstructor.c
++++ b/MdePkg/Library/UefiDebugLibDebugPortProtocol/DebugLibConstructor.c
+@@ -64,12 +64,11 @@ DxeDebugLibConstructor(
+ {
+   mDebugBS = SystemTable->BootServices;
+ 
+-  mDebugBS->CreateEventEx (
+-              EVT_NOTIFY_SIGNAL,
++  mDebugBS->CreateEvent (
++              EVT_SIGNAL_EXIT_BOOT_SERVICES,
+               TPL_NOTIFY,
+               ExitBootServicesCallback,
+               NULL,
+-              &gEfiEventExitBootServicesGuid,
+               &mExitBootServicesEvent
+               );
+ 
+diff --git a/MdePkg/Library/UefiDebugLibStdErr/DebugLibConstructor.c b/MdePkg/Library/UefiDebugLibStdErr/DebugLibConstructor.c
+index ed73f92818..b4ac17cf55 100644
+--- a/MdePkg/Library/UefiDebugLibStdErr/DebugLibConstructor.c
++++ b/MdePkg/Library/UefiDebugLibStdErr/DebugLibConstructor.c
+@@ -64,12 +64,11 @@ DxeDebugLibConstructor(
+ {
+   mDebugST = SystemTable;
+ 
+-  SystemTable->BootServices->CreateEventEx (
+-                                EVT_NOTIFY_SIGNAL,
++  SystemTable->BootServices->CreateEvent (
++                                EVT_SIGNAL_EXIT_BOOT_SERVICES,
+                                 TPL_NOTIFY,
+                                 ExitBootServicesCallback,
+                                 NULL,
+-                                &gEfiEventExitBootServicesGuid,
+                                 &mExitBootServicesEvent
+                                 );
+ 
+diff --git a/MdePkg/Library/UefiRuntimeLib/RuntimeLib.c b/MdePkg/Library/UefiRuntimeLib/RuntimeLib.c
+index 933e0099ce..a2eadafac8 100644
+--- a/MdePkg/Library/UefiRuntimeLib/RuntimeLib.c
++++ b/MdePkg/Library/UefiRuntimeLib/RuntimeLib.c
+@@ -93,23 +93,21 @@ RuntimeDriverLibConstruct (
+   //
+   // Register SetVirtualAddressMap () notify function
+   //
+-  Status = gBS->CreateEventEx (
+-                  EVT_NOTIFY_SIGNAL,
++  Status = gBS->CreateEvent (
++                  EVT_SIGNAL_VIRTUAL_ADDRESS_CHANGE,
+                   TPL_NOTIFY,
+                   RuntimeLibVirtualNotifyEvent,
+                   NULL,
+-                  &gEfiEventVirtualAddressChangeGuid,
+                   &mEfiVirtualNotifyEvent
+                   );
+ 
+   ASSERT_EFI_ERROR (Status);
+ 
+-  Status = gBS->CreateEventEx (
+-                  EVT_NOTIFY_SIGNAL,
++  Status = gBS->CreateEvent (
++                  EVT_SIGNAL_EXIT_BOOT_SERVICES,
+                   TPL_NOTIFY,
+                   RuntimeLibExitBootServicesEvent,
+                   NULL,
+-                  &gEfiEventExitBootServicesGuid,
+                   &mEfiExitBootServicesEvent
+                   );
+ 
+-- 
+2.21.0 (Apple Git-122.2)
+
