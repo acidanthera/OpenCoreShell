@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PKGVER=1.0.4
+
 package() {
   if [ ! -d "$1" ]; then
     echo "Missing package directory"
