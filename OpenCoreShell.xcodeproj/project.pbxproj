@@ -1,0 +1,2109 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3517B01723ED646800D23F72 /* ShellCEntryLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEF723ED646700D23F72 /* ShellCEntryLib.h */; };
+		3517B01823ED646800D23F72 /* HandleParsingLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEF823ED646700D23F72 /* HandleParsingLib.h */; };
+		3517B01923ED646800D23F72 /* BcfgCommandLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEF923ED646700D23F72 /* BcfgCommandLib.h */; };
+		3517B01A23ED646800D23F72 /* ShellCommandLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEFA23ED646700D23F72 /* ShellCommandLib.h */; };
+		3517B01B23ED646800D23F72 /* ShellLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEFB23ED646700D23F72 /* ShellLib.h */; };
+		3517B01C23ED646800D23F72 /* EfiShellInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEFD23ED646700D23F72 /* EfiShellInterface.h */; };
+		3517B01D23ED646800D23F72 /* EfiShellEnvironment2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AEFE23ED646700D23F72 /* EfiShellEnvironment2.h */; };
+		3517B01E23ED646800D23F72 /* ShellEnvironment2Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0023ED646700D23F72 /* ShellEnvironment2Ext.h */; };
+		3517B01F23ED646800D23F72 /* ShellVariableGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0123ED646700D23F72 /* ShellVariableGuid.h */; };
+		3517B02023ED646800D23F72 /* ShellLibHiiGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0223ED646700D23F72 /* ShellLibHiiGuid.h */; };
+		3517B02123ED646800D23F72 /* ShellAliasGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0323ED646700D23F72 /* ShellAliasGuid.h */; };
+		3517B02223ED646800D23F72 /* ShellMapGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0423ED646700D23F72 /* ShellMapGuid.h */; };
+		3517B02323ED646800D23F72 /* ShellPkgTokenSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0523ED646700D23F72 /* ShellPkgTokenSpace.h */; };
+		3517B02423ED646800D23F72 /* DpInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0823ED646700D23F72 /* DpInternal.h */; };
+		3517B02523ED646800D23F72 /* DpTrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF0923ED646700D23F72 /* DpTrace.c */; };
+		3517B02623ED646800D23F72 /* DpApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF0A23ED646700D23F72 /* DpApp.c */; };
+		3517B02723ED646800D23F72 /* Dp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0B23ED646700D23F72 /* Dp.h */; };
+		3517B02823ED646800D23F72 /* Literals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF0E23ED646700D23F72 /* Literals.h */; };
+		3517B02923ED646800D23F72 /* DpUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF0F23ED646700D23F72 /* DpUtilities.c */; };
+		3517B02A23ED646800D23F72 /* Literals.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1023ED646700D23F72 /* Literals.c */; };
+		3517B02B23ED646800D23F72 /* DpDynamicCommand.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1123ED646700D23F72 /* DpDynamicCommand.c */; };
+		3517B02C23ED646800D23F72 /* Dp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1323ED646700D23F72 /* Dp.c */; };
+		3517B02D23ED646800D23F72 /* TftpApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1623ED646700D23F72 /* TftpApp.c */; };
+		3517B02E23ED646800D23F72 /* Tftp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1723ED646700D23F72 /* Tftp.c */; };
+		3517B02F23ED646800D23F72 /* Tftp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF1A23ED646700D23F72 /* Tftp.h */; };
+		3517B03023ED646800D23F72 /* TftpDynamicCommand.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1B23ED646700D23F72 /* TftpDynamicCommand.c */; };
+		3517B03123ED646800D23F72 /* ConsistMapping.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1E23ED646700D23F72 /* ConsistMapping.c */; };
+		3517B03223ED646800D23F72 /* UnicodeCollationEng.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF1F23ED646700D23F72 /* UnicodeCollationEng.c */; };
+		3517B03323ED646800D23F72 /* UefiShellCommandLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF2123ED646700D23F72 /* UefiShellCommandLib.h */; };
+		3517B03423ED646800D23F72 /* UnicodeCollationEng.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF2223ED646700D23F72 /* UnicodeCollationEng.h */; };
+		3517B03523ED646800D23F72 /* UefiShellCommandLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF2323ED646700D23F72 /* UefiShellCommandLib.c */; };
+		3517B03623ED646800D23F72 /* UefiHandleParsingLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF2523ED646700D23F72 /* UefiHandleParsingLib.h */; };
+		3517B03723ED646800D23F72 /* UefiHandleParsingLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF2823ED646700D23F72 /* UefiHandleParsingLib.c */; };
+		3517B03823ED646800D23F72 /* GetMtc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF2A23ED646700D23F72 /* GetMtc.c */; };
+		3517B03923ED646800D23F72 /* UefiShellLevel3CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF2C23ED646700D23F72 /* UefiShellLevel3CommandsLib.h */; };
+		3517B03A23ED646800D23F72 /* Help.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF2E23ED646700D23F72 /* Help.c */; };
+		3517B03B23ED646800D23F72 /* Type.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF2F23ED646700D23F72 /* Type.c */; };
+		3517B03C23ED646800D23F72 /* Alias.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3023ED646700D23F72 /* Alias.c */; };
+		3517B03D23ED646800D23F72 /* Cls.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3123ED646700D23F72 /* Cls.c */; };
+		3517B03E23ED646800D23F72 /* Ver.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3223ED646700D23F72 /* Ver.c */; };
+		3517B03F23ED646800D23F72 /* Touch.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3323ED646700D23F72 /* Touch.c */; };
+		3517B04023ED646800D23F72 /* Pause.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3423ED646700D23F72 /* Pause.c */; };
+		3517B04123ED646800D23F72 /* UefiShellLevel3CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3523ED646700D23F72 /* UefiShellLevel3CommandsLib.c */; };
+		3517B04223ED646800D23F72 /* Echo.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3623ED646700D23F72 /* Echo.c */; };
+		3517B04323ED646800D23F72 /* UefiShellNetwork1CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3823ED646700D23F72 /* UefiShellNetwork1CommandsLib.c */; };
+		3517B04423ED646800D23F72 /* Ping.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3923ED646700D23F72 /* Ping.c */; };
+		3517B04523ED646800D23F72 /* UefiShellNetwork1CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF3A23ED646700D23F72 /* UefiShellNetwork1CommandsLib.h */; };
+		3517B04623ED646800D23F72 /* Ifconfig.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3D23ED646700D23F72 /* Ifconfig.c */; };
+		3517B04723ED646800D23F72 /* UefiShellCEntryLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF3F23ED646700D23F72 /* UefiShellCEntryLib.c */; };
+		3517B04823ED646800D23F72 /* Stall.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4223ED646700D23F72 /* Stall.c */; };
+		3517B04923ED646800D23F72 /* UefiShellLevel1CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4423ED646700D23F72 /* UefiShellLevel1CommandsLib.c */; };
+		3517B04A23ED646800D23F72 /* Shift.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4523ED646700D23F72 /* Shift.c */; };
+		3517B04B23ED646800D23F72 /* Exit.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4723ED646700D23F72 /* Exit.c */; };
+		3517B04C23ED646800D23F72 /* If.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4823ED646700D23F72 /* If.c */; };
+		3517B04D23ED646800D23F72 /* UefiShellLevel1CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF4923ED646700D23F72 /* UefiShellLevel1CommandsLib.h */; };
+		3517B04E23ED646800D23F72 /* For.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4A23ED646700D23F72 /* For.c */; };
+		3517B04F23ED646800D23F72 /* Goto.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4B23ED646700D23F72 /* Goto.c */; };
+		3517B05023ED646800D23F72 /* Cp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4D23ED646700D23F72 /* Cp.c */; };
+		3517B05123ED646800D23F72 /* Ls.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4E23ED646700D23F72 /* Ls.c */; };
+		3517B05223ED646800D23F72 /* Vol.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF4F23ED646700D23F72 /* Vol.c */; };
+		3517B05323ED646800D23F72 /* UefiShellLevel2CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF5123ED646700D23F72 /* UefiShellLevel2CommandsLib.h */; };
+		3517B05423ED646800D23F72 /* Rm.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5223ED646700D23F72 /* Rm.c */; };
+		3517B05523ED646800D23F72 /* Set.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5323ED646700D23F72 /* Set.c */; };
+		3517B05623ED646800D23F72 /* Reset.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5523ED646700D23F72 /* Reset.c */; };
+		3517B05723ED646800D23F72 /* MkDir.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5623ED646700D23F72 /* MkDir.c */; };
+		3517B05823ED646800D23F72 /* Map.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5723ED646700D23F72 /* Map.c */; };
+		3517B05923ED646800D23F72 /* Cd.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5823ED646700D23F72 /* Cd.c */; };
+		3517B05A23ED646800D23F72 /* Attrib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5923ED646700D23F72 /* Attrib.c */; };
+		3517B05B23ED646800D23F72 /* Mv.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5A23ED646700D23F72 /* Mv.c */; };
+		3517B05C23ED646800D23F72 /* UefiShellLevel2CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5B23ED646700D23F72 /* UefiShellLevel2CommandsLib.c */; };
+		3517B05D23ED646800D23F72 /* Parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5C23ED646700D23F72 /* Parse.c */; };
+		3517B05E23ED646800D23F72 /* Load.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5D23ED646700D23F72 /* Load.c */; };
+		3517B05F23ED646800D23F72 /* TimeDate.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF5E23ED646700D23F72 /* TimeDate.c */; };
+		3517B06023ED646800D23F72 /* UefiShellBcfgCommandLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6223ED646700D23F72 /* UefiShellBcfgCommandLib.c */; };
+		3517B06123ED646800D23F72 /* DevTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6423ED646700D23F72 /* DevTree.c */; };
+		3517B06223ED646800D23F72 /* Drivers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6523ED646700D23F72 /* Drivers.c */; };
+		3517B06323ED646800D23F72 /* Unload.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6623ED646700D23F72 /* Unload.c */; };
+		3517B06423ED646800D23F72 /* DrvCfg.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6723ED646700D23F72 /* DrvCfg.c */; };
+		3517B06523ED646800D23F72 /* Reconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6823ED646700D23F72 /* Reconnect.c */; };
+		3517B06623ED646800D23F72 /* Disconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6923ED646700D23F72 /* Disconnect.c */; };
+		3517B06723ED646800D23F72 /* DrvDiag.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6A23ED646700D23F72 /* DrvDiag.c */; };
+		3517B06823ED646800D23F72 /* UefiShellDriver1CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF6B23ED646700D23F72 /* UefiShellDriver1CommandsLib.h */; };
+		3517B06923ED646800D23F72 /* OpenInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6C23ED646700D23F72 /* OpenInfo.c */; };
+		3517B06A23ED646800D23F72 /* Devices.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF6D23ED646700D23F72 /* Devices.c */; };
+		3517B06B23ED646800D23F72 /* Connect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7023ED646700D23F72 /* Connect.c */; };
+		3517B06C23ED646800D23F72 /* Dh.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7123ED646700D23F72 /* Dh.c */; };
+		3517B06D23ED646800D23F72 /* UefiShellDriver1CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7223ED646700D23F72 /* UefiShellDriver1CommandsLib.c */; };
+		3517B06E23ED646800D23F72 /* UefiShellNetwork2CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF7423ED646700D23F72 /* UefiShellNetwork2CommandsLib.h */; };
+		3517B06F23ED646800D23F72 /* Ifconfig6.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7523ED646700D23F72 /* Ifconfig6.c */; };
+		3517B07023ED646800D23F72 /* Ping6.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7623ED646700D23F72 /* Ping6.c */; };
+		3517B07123ED646800D23F72 /* UefiShellNetwork2CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7923ED646700D23F72 /* UefiShellNetwork2CommandsLib.c */; };
+		3517B07223ED646800D23F72 /* UefiShellInstall1CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF7B23ED646700D23F72 /* UefiShellInstall1CommandsLib.c */; };
+		3517B07323ED646800D23F72 /* SratParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8023ED646700D23F72 /* SratParser.c */; };
+		3517B07423ED646800D23F72 /* BgrtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8223ED646700D23F72 /* BgrtParser.c */; };
+		3517B07523ED646800D23F72 /* DsdtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8423ED646700D23F72 /* DsdtParser.c */; };
+		3517B07623ED646800D23F72 /* PpttParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF8623ED646700D23F72 /* PpttParser.h */; };
+		3517B07723ED646800D23F72 /* PpttParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8723ED646700D23F72 /* PpttParser.c */; };
+		3517B07823ED646800D23F72 /* XsdtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8923ED646700D23F72 /* XsdtParser.c */; };
+		3517B07923ED646800D23F72 /* SsdtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8B23ED646700D23F72 /* SsdtParser.c */; };
+		3517B07A23ED646800D23F72 /* SlitParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8D23ED646700D23F72 /* SlitParser.c */; };
+		3517B07B23ED646800D23F72 /* SpcrParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF8F23ED646700D23F72 /* SpcrParser.c */; };
+		3517B07C23ED646800D23F72 /* GtdtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9123ED646700D23F72 /* GtdtParser.c */; };
+		3517B07D23ED646800D23F72 /* MadtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9323ED646700D23F72 /* MadtParser.c */; };
+		3517B07E23ED646800D23F72 /* MadtParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF9423ED646700D23F72 /* MadtParser.h */; };
+		3517B07F23ED646800D23F72 /* McfgParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9623ED646700D23F72 /* McfgParser.c */; };
+		3517B08023ED646800D23F72 /* FadtParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9823ED646700D23F72 /* FadtParser.c */; };
+		3517B08123ED646800D23F72 /* Dbg2Parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9A23ED646700D23F72 /* Dbg2Parser.c */; };
+		3517B08223ED646800D23F72 /* IortParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9C23ED646700D23F72 /* IortParser.c */; };
+		3517B08323ED646800D23F72 /* RsdpParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AF9E23ED646700D23F72 /* RsdpParser.c */; };
+		3517B08423ED646800D23F72 /* AcpiView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AF9F23ED646700D23F72 /* AcpiView.h */; };
+		3517B08523ED646800D23F72 /* AcpiTableParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFA023ED646700D23F72 /* AcpiTableParser.c */; };
+		3517B08623ED646800D23F72 /* AcpiParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFA123ED646700D23F72 /* AcpiParser.c */; };
+		3517B08723ED646800D23F72 /* UefiShellAcpiViewCommandLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFA223ED646700D23F72 /* UefiShellAcpiViewCommandLib.h */; };
+		3517B08823ED646800D23F72 /* AcpiView.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFA323ED646700D23F72 /* AcpiView.c */; };
+		3517B08923ED646800D23F72 /* UefiShellAcpiViewCommandLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFA523ED646700D23F72 /* UefiShellAcpiViewCommandLib.c */; };
+		3517B08A23ED646800D23F72 /* AcpiTableParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFA623ED646700D23F72 /* AcpiTableParser.h */; };
+		3517B08B23ED646800D23F72 /* AcpiParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFA723ED646700D23F72 /* AcpiParser.h */; };
+		3517B08C23ED646800D23F72 /* Mode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFAA23ED646700D23F72 /* Mode.c */; };
+		3517B08D23ED646800D23F72 /* Comp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFAB23ED646700D23F72 /* Comp.c */; };
+		3517B08E23ED646800D23F72 /* EditMenuBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFAC23ED646700D23F72 /* EditMenuBar.h */; };
+		3517B08F23ED646800D23F72 /* DmpStore.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFAD23ED646700D23F72 /* DmpStore.c */; };
+		3517B09023ED646800D23F72 /* MemMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFAE23ED646700D23F72 /* MemMap.c */; };
+		3517B09123ED646800D23F72 /* UefiShellDebug1CommandsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFAF23ED646700D23F72 /* UefiShellDebug1CommandsLib.h */; };
+		3517B09223ED646800D23F72 /* Dmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB023ED646700D23F72 /* Dmem.c */; };
+		3517B09323ED646800D23F72 /* EditInputBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFB123ED646700D23F72 /* EditInputBar.h */; };
+		3517B09423ED646800D23F72 /* SetSize.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB223ED646700D23F72 /* SetSize.c */; };
+		3517B09523ED646800D23F72 /* Compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB323ED646700D23F72 /* Compress.c */; };
+		3517B09623ED646800D23F72 /* SetVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB423ED646700D23F72 /* SetVar.c */; };
+		3517B09723ED646800D23F72 /* EfiDecompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB523ED646700D23F72 /* EfiDecompress.c */; };
+		3517B09823ED646800D23F72 /* Pci.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB623ED646700D23F72 /* Pci.c */; };
+		3517B09923ED646800D23F72 /* EditTitleBar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFB823ED646700D23F72 /* EditTitleBar.c */; };
+		3517B09A23ED646800D23F72 /* EditStatusBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFBA23ED646700D23F72 /* EditStatusBar.h */; };
+		3517B09B23ED646800D23F72 /* EditInputBar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFBB23ED646700D23F72 /* EditInputBar.c */; };
+		3517B09C23ED646800D23F72 /* TextEditorTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFBD23ED646700D23F72 /* TextEditorTypes.h */; };
+		3517B09D23ED646800D23F72 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFBE23ED646700D23F72 /* Misc.h */; };
+		3517B09E23ED646800D23F72 /* FileBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFBF23ED646700D23F72 /* FileBuffer.h */; };
+		3517B09F23ED646900D23F72 /* MainTextEditor.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC023ED646700D23F72 /* MainTextEditor.c */; };
+		3517B0A023ED646900D23F72 /* Edit.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC123ED646700D23F72 /* Edit.c */; };
+		3517B0A123ED646900D23F72 /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFC323ED646700D23F72 /* TextEditor.h */; };
+		3517B0A223ED646900D23F72 /* Misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC423ED646700D23F72 /* Misc.c */; };
+		3517B0A323ED646900D23F72 /* FileBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC523ED646700D23F72 /* FileBuffer.c */; };
+		3517B0A423ED646900D23F72 /* MainTextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFC623ED646700D23F72 /* MainTextEditor.h */; };
+		3517B0A523ED646900D23F72 /* UefiShellDebug1CommandsLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC723ED646700D23F72 /* UefiShellDebug1CommandsLib.c */; };
+		3517B0A623ED646900D23F72 /* EditMenuBar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFC823ED646700D23F72 /* EditMenuBar.c */; };
+		3517B0A723ED646900D23F72 /* BufferImage.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFCA23ED646800D23F72 /* BufferImage.c */; };
+		3517B0A823ED646900D23F72 /* HexEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFCB23ED646800D23F72 /* HexEditor.h */; };
+		3517B0A923ED646900D23F72 /* DiskImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFCC23ED646800D23F72 /* DiskImage.h */; };
+		3517B0AA23ED646900D23F72 /* Clipboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFCD23ED646800D23F72 /* Clipboard.c */; };
+		3517B0AB23ED646900D23F72 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFCF23ED646800D23F72 /* Misc.h */; };
+		3517B0AC23ED646900D23F72 /* FileImage.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD023ED646800D23F72 /* FileImage.c */; };
+		3517B0AD23ED646900D23F72 /* MainHexEditor.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD123ED646800D23F72 /* MainHexEditor.c */; };
+		3517B0AE23ED646900D23F72 /* MemImage.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD223ED646800D23F72 /* MemImage.c */; };
+		3517B0AF23ED646900D23F72 /* HexEdit.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD323ED646800D23F72 /* HexEdit.c */; };
+		3517B0B023ED646900D23F72 /* BufferImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFD423ED646800D23F72 /* BufferImage.h */; };
+		3517B0B123ED646900D23F72 /* HexEditorTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFD523ED646800D23F72 /* HexEditorTypes.h */; };
+		3517B0B223ED646900D23F72 /* DiskImage.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD623ED646800D23F72 /* DiskImage.c */; };
+		3517B0B323ED646900D23F72 /* Clipboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFD723ED646800D23F72 /* Clipboard.h */; };
+		3517B0B423ED646900D23F72 /* FileImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFD823ED646800D23F72 /* FileImage.h */; };
+		3517B0B523ED646900D23F72 /* Misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFD923ED646800D23F72 /* Misc.c */; };
+		3517B0B623ED646900D23F72 /* MainHexEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFDA23ED646800D23F72 /* MainHexEditor.h */; };
+		3517B0B723ED646900D23F72 /* MemImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFDB23ED646800D23F72 /* MemImage.h */; };
+		3517B0B823ED646900D23F72 /* Compress.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFDC23ED646800D23F72 /* Compress.h */; };
+		3517B0B923ED646900D23F72 /* Mm.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFDD23ED646800D23F72 /* Mm.c */; };
+		3517B0BA23ED646900D23F72 /* SerMode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFDE23ED646800D23F72 /* SerMode.c */; };
+		3517B0BB23ED646900D23F72 /* Dblk.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFDF23ED646800D23F72 /* Dblk.c */; };
+		3517B0BC23ED646900D23F72 /* Pci.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFE023ED646800D23F72 /* Pci.h */; };
+		3517B0BD23ED646900D23F72 /* EditStatusBar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFE123ED646800D23F72 /* EditStatusBar.c */; };
+		3517B0BE23ED646900D23F72 /* LoadPciRom.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFE223ED646800D23F72 /* LoadPciRom.c */; };
+		3517B0BF23ED646900D23F72 /* EfiCompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFE323ED646800D23F72 /* EfiCompress.c */; };
+		3517B0C023ED646900D23F72 /* EditTitleBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFE423ED646800D23F72 /* EditTitleBar.h */; };
+		3517B0C123ED646900D23F72 /* SmbiosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFE623ED646800D23F72 /* SmbiosView.h */; };
+		3517B0C223ED646900D23F72 /* PrintInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFE723ED646800D23F72 /* PrintInfo.c */; };
+		3517B0C323ED646900D23F72 /* QueryTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFE823ED646800D23F72 /* QueryTable.h */; };
+		3517B0C423ED646900D23F72 /* LibSmbiosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFEA23ED646800D23F72 /* LibSmbiosView.h */; };
+		3517B0C523ED646900D23F72 /* EventLogInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFEB23ED646800D23F72 /* EventLogInfo.h */; };
+		3517B0C623ED646900D23F72 /* PrintInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFEC23ED646800D23F72 /* PrintInfo.h */; };
+		3517B0C723ED646900D23F72 /* SmbiosView.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFED23ED646800D23F72 /* SmbiosView.c */; };
+		3517B0C823ED646900D23F72 /* LibSmbiosView.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFEE23ED646800D23F72 /* LibSmbiosView.c */; };
+		3517B0C923ED646900D23F72 /* QueryTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFEF23ED646800D23F72 /* QueryTable.c */; };
+		3517B0CA23ED646900D23F72 /* EventLogInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFF023ED646800D23F72 /* EventLogInfo.c */; };
+		3517B0CB23ED646900D23F72 /* UefiShellLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517AFF323ED646800D23F72 /* UefiShellLib.c */; };
+		3517B0CC23ED646900D23F72 /* UefiShellLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFF423ED646800D23F72 /* UefiShellLib.h */; };
+		3517B0CD23ED646900D23F72 /* ConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFF823ED646800D23F72 /* ConsoleLogger.h */; };
+		3517B0CE23ED646900D23F72 /* ShellParametersProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFF923ED646800D23F72 /* ShellParametersProtocol.h */; };
+		3517B0CF23ED646900D23F72 /* FileHandleWrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFA23ED646800D23F72 /* FileHandleWrappers.h */; };
+		3517B0D023ED646900D23F72 /* Shell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFB23ED646800D23F72 /* Shell.h */; };
+		3517B0D123ED646900D23F72 /* ConsoleWrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFC23ED646800D23F72 /* ConsoleWrappers.h */; };
+		3517B0D223ED646900D23F72 /* ShellManParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFD23ED646800D23F72 /* ShellManParser.h */; };
+		3517B0D323ED646900D23F72 /* FileHandleInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFE23ED646800D23F72 /* FileHandleInternal.h */; };
+		3517B0D423ED646900D23F72 /* ShellProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517AFFF23ED646800D23F72 /* ShellProtocol.h */; };
+		3517B0D523ED646900D23F72 /* ShellEnvVar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3517B00023ED646800D23F72 /* ShellEnvVar.h */; };
+		3517B0D623ED646900D23F72 /* FileHandleWrappers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00123ED646800D23F72 /* FileHandleWrappers.c */; };
+		3517B0D723ED646900D23F72 /* ShellParametersProtocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00223ED646800D23F72 /* ShellParametersProtocol.c */; };
+		3517B0D823ED646900D23F72 /* Shell.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00323ED646800D23F72 /* Shell.c */; };
+		3517B0D923ED646900D23F72 /* ConsoleLogger.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00423ED646800D23F72 /* ConsoleLogger.c */; };
+		3517B0DA23ED646900D23F72 /* ShellManParser.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00523ED646800D23F72 /* ShellManParser.c */; };
+		3517B0DB23ED646900D23F72 /* ConsoleWrappers.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00623ED646800D23F72 /* ConsoleWrappers.c */; };
+		3517B0DC23ED646900D23F72 /* ShellProtocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00823ED646800D23F72 /* ShellProtocol.c */; };
+		3517B0DD23ED646900D23F72 /* ShellEnvVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00A23ED646800D23F72 /* ShellEnvVar.c */; };
+		3517B0DE23ED646900D23F72 /* ShellCTestApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B00C23ED646800D23F72 /* ShellCTestApp.c */; };
+		3517B0DF23ED646900D23F72 /* SA.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B01323ED646800D23F72 /* SA.c */; };
+		3517B0E023ED646900D23F72 /* ShellSortTestApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3517B01523ED646800D23F72 /* ShellSortTestApp.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3517565323ED612C00D23F72 /* Patches */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Patches; sourceTree = "<group>"; };
+		3517565423ED612C00D23F72 /* UDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UDK; sourceTree = "<group>"; };
+		3517AEF323ED646700D23F72 /* ShellPkg.dsc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShellPkg.dsc; sourceTree = "<group>"; };
+		3517AEF423ED646700D23F72 /* ShellPkg.dec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShellPkg.dec; sourceTree = "<group>"; };
+		3517AEF723ED646700D23F72 /* ShellCEntryLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellCEntryLib.h; sourceTree = "<group>"; };
+		3517AEF823ED646700D23F72 /* HandleParsingLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleParsingLib.h; sourceTree = "<group>"; };
+		3517AEF923ED646700D23F72 /* BcfgCommandLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BcfgCommandLib.h; sourceTree = "<group>"; };
+		3517AEFA23ED646700D23F72 /* ShellCommandLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellCommandLib.h; sourceTree = "<group>"; };
+		3517AEFB23ED646700D23F72 /* ShellLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellLib.h; sourceTree = "<group>"; };
+		3517AEFD23ED646700D23F72 /* EfiShellInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfiShellInterface.h; sourceTree = "<group>"; };
+		3517AEFE23ED646700D23F72 /* EfiShellEnvironment2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfiShellEnvironment2.h; sourceTree = "<group>"; };
+		3517AF0023ED646700D23F72 /* ShellEnvironment2Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellEnvironment2Ext.h; sourceTree = "<group>"; };
+		3517AF0123ED646700D23F72 /* ShellVariableGuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellVariableGuid.h; sourceTree = "<group>"; };
+		3517AF0223ED646700D23F72 /* ShellLibHiiGuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellLibHiiGuid.h; sourceTree = "<group>"; };
+		3517AF0323ED646700D23F72 /* ShellAliasGuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellAliasGuid.h; sourceTree = "<group>"; };
+		3517AF0423ED646700D23F72 /* ShellMapGuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellMapGuid.h; sourceTree = "<group>"; };
+		3517AF0523ED646700D23F72 /* ShellPkgTokenSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellPkgTokenSpace.h; sourceTree = "<group>"; };
+		3517AF0823ED646700D23F72 /* DpInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DpInternal.h; sourceTree = "<group>"; };
+		3517AF0923ED646700D23F72 /* DpTrace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DpTrace.c; sourceTree = "<group>"; };
+		3517AF0A23ED646700D23F72 /* DpApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DpApp.c; sourceTree = "<group>"; };
+		3517AF0B23ED646700D23F72 /* Dp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dp.h; sourceTree = "<group>"; };
+		3517AF0C23ED646700D23F72 /* Dp.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dp.uni; sourceTree = "<group>"; };
+		3517AF0D23ED646700D23F72 /* DpDynamicCommand.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DpDynamicCommand.inf; sourceTree = "<group>"; };
+		3517AF0E23ED646700D23F72 /* Literals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Literals.h; sourceTree = "<group>"; };
+		3517AF0F23ED646700D23F72 /* DpUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DpUtilities.c; sourceTree = "<group>"; };
+		3517AF1023ED646700D23F72 /* Literals.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Literals.c; sourceTree = "<group>"; };
+		3517AF1123ED646700D23F72 /* DpDynamicCommand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DpDynamicCommand.c; sourceTree = "<group>"; };
+		3517AF1223ED646700D23F72 /* DpApp.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DpApp.inf; sourceTree = "<group>"; };
+		3517AF1323ED646700D23F72 /* Dp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Dp.c; sourceTree = "<group>"; };
+		3517AF1523ED646700D23F72 /* TftpApp.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TftpApp.inf; sourceTree = "<group>"; };
+		3517AF1623ED646700D23F72 /* TftpApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TftpApp.c; sourceTree = "<group>"; };
+		3517AF1723ED646700D23F72 /* Tftp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tftp.c; sourceTree = "<group>"; };
+		3517AF1823ED646700D23F72 /* Tftp.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tftp.uni; sourceTree = "<group>"; };
+		3517AF1923ED646700D23F72 /* TftpDynamicCommand.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TftpDynamicCommand.inf; sourceTree = "<group>"; };
+		3517AF1A23ED646700D23F72 /* Tftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tftp.h; sourceTree = "<group>"; };
+		3517AF1B23ED646700D23F72 /* TftpDynamicCommand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TftpDynamicCommand.c; sourceTree = "<group>"; };
+		3517AF1E23ED646700D23F72 /* ConsistMapping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConsistMapping.c; sourceTree = "<group>"; };
+		3517AF1F23ED646700D23F72 /* UnicodeCollationEng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UnicodeCollationEng.c; sourceTree = "<group>"; };
+		3517AF2023ED646700D23F72 /* UefiShellCommandLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellCommandLib.inf; sourceTree = "<group>"; };
+		3517AF2123ED646700D23F72 /* UefiShellCommandLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellCommandLib.h; sourceTree = "<group>"; };
+		3517AF2223ED646700D23F72 /* UnicodeCollationEng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnicodeCollationEng.h; sourceTree = "<group>"; };
+		3517AF2323ED646700D23F72 /* UefiShellCommandLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellCommandLib.c; sourceTree = "<group>"; };
+		3517AF2523ED646700D23F72 /* UefiHandleParsingLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiHandleParsingLib.h; sourceTree = "<group>"; };
+		3517AF2623ED646700D23F72 /* UefiHandleParsingLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiHandleParsingLib.inf; sourceTree = "<group>"; };
+		3517AF2723ED646700D23F72 /* UefiHandleParsingLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiHandleParsingLib.uni; sourceTree = "<group>"; };
+		3517AF2823ED646700D23F72 /* UefiHandleParsingLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiHandleParsingLib.c; sourceTree = "<group>"; };
+		3517AF2A23ED646700D23F72 /* GetMtc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GetMtc.c; sourceTree = "<group>"; };
+		3517AF2B23ED646700D23F72 /* UefiShellLevel3CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel3CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF2C23ED646700D23F72 /* UefiShellLevel3CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellLevel3CommandsLib.h; sourceTree = "<group>"; };
+		3517AF2D23ED646700D23F72 /* UefiShellLevel3CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel3CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF2E23ED646700D23F72 /* Help.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Help.c; sourceTree = "<group>"; };
+		3517AF2F23ED646700D23F72 /* Type.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Type.c; sourceTree = "<group>"; };
+		3517AF3023ED646700D23F72 /* Alias.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Alias.c; sourceTree = "<group>"; };
+		3517AF3123ED646700D23F72 /* Cls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cls.c; sourceTree = "<group>"; };
+		3517AF3223ED646700D23F72 /* Ver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ver.c; sourceTree = "<group>"; };
+		3517AF3323ED646700D23F72 /* Touch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Touch.c; sourceTree = "<group>"; };
+		3517AF3423ED646700D23F72 /* Pause.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Pause.c; sourceTree = "<group>"; };
+		3517AF3523ED646700D23F72 /* UefiShellLevel3CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellLevel3CommandsLib.c; sourceTree = "<group>"; };
+		3517AF3623ED646700D23F72 /* Echo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Echo.c; sourceTree = "<group>"; };
+		3517AF3823ED646700D23F72 /* UefiShellNetwork1CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellNetwork1CommandsLib.c; sourceTree = "<group>"; };
+		3517AF3923ED646700D23F72 /* Ping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ping.c; sourceTree = "<group>"; };
+		3517AF3A23ED646700D23F72 /* UefiShellNetwork1CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellNetwork1CommandsLib.h; sourceTree = "<group>"; };
+		3517AF3B23ED646700D23F72 /* UefiShellNetwork1CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellNetwork1CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF3C23ED646700D23F72 /* UefiShellNetwork1CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellNetwork1CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF3D23ED646700D23F72 /* Ifconfig.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ifconfig.c; sourceTree = "<group>"; };
+		3517AF3F23ED646700D23F72 /* UefiShellCEntryLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellCEntryLib.c; sourceTree = "<group>"; };
+		3517AF4023ED646700D23F72 /* UefiShellCEntryLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellCEntryLib.inf; sourceTree = "<group>"; };
+		3517AF4223ED646700D23F72 /* Stall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stall.c; sourceTree = "<group>"; };
+		3517AF4323ED646700D23F72 /* UefiShellLevel1CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel1CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF4423ED646700D23F72 /* UefiShellLevel1CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellLevel1CommandsLib.c; sourceTree = "<group>"; };
+		3517AF4523ED646700D23F72 /* Shift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Shift.c; sourceTree = "<group>"; };
+		3517AF4623ED646700D23F72 /* UefiShellLevel1CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel1CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF4723ED646700D23F72 /* Exit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Exit.c; sourceTree = "<group>"; };
+		3517AF4823ED646700D23F72 /* If.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = If.c; sourceTree = "<group>"; };
+		3517AF4923ED646700D23F72 /* UefiShellLevel1CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellLevel1CommandsLib.h; sourceTree = "<group>"; };
+		3517AF4A23ED646700D23F72 /* For.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = For.c; sourceTree = "<group>"; };
+		3517AF4B23ED646700D23F72 /* Goto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Goto.c; sourceTree = "<group>"; };
+		3517AF4D23ED646700D23F72 /* Cp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cp.c; sourceTree = "<group>"; };
+		3517AF4E23ED646700D23F72 /* Ls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ls.c; sourceTree = "<group>"; };
+		3517AF4F23ED646700D23F72 /* Vol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Vol.c; sourceTree = "<group>"; };
+		3517AF5023ED646700D23F72 /* UefiShellLevel2CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel2CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF5123ED646700D23F72 /* UefiShellLevel2CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellLevel2CommandsLib.h; sourceTree = "<group>"; };
+		3517AF5223ED646700D23F72 /* Rm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Rm.c; sourceTree = "<group>"; };
+		3517AF5323ED646700D23F72 /* Set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Set.c; sourceTree = "<group>"; };
+		3517AF5423ED646700D23F72 /* UefiShellLevel2CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLevel2CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF5523ED646700D23F72 /* Reset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Reset.c; sourceTree = "<group>"; };
+		3517AF5623ED646700D23F72 /* MkDir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MkDir.c; sourceTree = "<group>"; };
+		3517AF5723ED646700D23F72 /* Map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Map.c; sourceTree = "<group>"; };
+		3517AF5823ED646700D23F72 /* Cd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cd.c; sourceTree = "<group>"; };
+		3517AF5923ED646700D23F72 /* Attrib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Attrib.c; sourceTree = "<group>"; };
+		3517AF5A23ED646700D23F72 /* Mv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mv.c; sourceTree = "<group>"; };
+		3517AF5B23ED646700D23F72 /* UefiShellLevel2CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellLevel2CommandsLib.c; sourceTree = "<group>"; };
+		3517AF5C23ED646700D23F72 /* Parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Parse.c; sourceTree = "<group>"; };
+		3517AF5D23ED646700D23F72 /* Load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Load.c; sourceTree = "<group>"; };
+		3517AF5E23ED646700D23F72 /* TimeDate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TimeDate.c; sourceTree = "<group>"; };
+		3517AF6023ED646700D23F72 /* UefiShellBcfgCommandLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellBcfgCommandLib.uni; sourceTree = "<group>"; };
+		3517AF6123ED646700D23F72 /* UefiShellBcfgCommandLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellBcfgCommandLib.inf; sourceTree = "<group>"; };
+		3517AF6223ED646700D23F72 /* UefiShellBcfgCommandLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellBcfgCommandLib.c; sourceTree = "<group>"; };
+		3517AF6423ED646700D23F72 /* DevTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DevTree.c; sourceTree = "<group>"; };
+		3517AF6523ED646700D23F72 /* Drivers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Drivers.c; sourceTree = "<group>"; };
+		3517AF6623ED646700D23F72 /* Unload.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Unload.c; sourceTree = "<group>"; };
+		3517AF6723ED646700D23F72 /* DrvCfg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DrvCfg.c; sourceTree = "<group>"; };
+		3517AF6823ED646700D23F72 /* Reconnect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Reconnect.c; sourceTree = "<group>"; };
+		3517AF6923ED646700D23F72 /* Disconnect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Disconnect.c; sourceTree = "<group>"; };
+		3517AF6A23ED646700D23F72 /* DrvDiag.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DrvDiag.c; sourceTree = "<group>"; };
+		3517AF6B23ED646700D23F72 /* UefiShellDriver1CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellDriver1CommandsLib.h; sourceTree = "<group>"; };
+		3517AF6C23ED646700D23F72 /* OpenInfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = OpenInfo.c; sourceTree = "<group>"; };
+		3517AF6D23ED646700D23F72 /* Devices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Devices.c; sourceTree = "<group>"; };
+		3517AF6E23ED646700D23F72 /* UefiShellDriver1CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellDriver1CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF6F23ED646700D23F72 /* UefiShellDriver1CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellDriver1CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF7023ED646700D23F72 /* Connect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Connect.c; sourceTree = "<group>"; };
+		3517AF7123ED646700D23F72 /* Dh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Dh.c; sourceTree = "<group>"; };
+		3517AF7223ED646700D23F72 /* UefiShellDriver1CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellDriver1CommandsLib.c; sourceTree = "<group>"; };
+		3517AF7423ED646700D23F72 /* UefiShellNetwork2CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellNetwork2CommandsLib.h; sourceTree = "<group>"; };
+		3517AF7523ED646700D23F72 /* Ifconfig6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ifconfig6.c; sourceTree = "<group>"; };
+		3517AF7623ED646700D23F72 /* Ping6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ping6.c; sourceTree = "<group>"; };
+		3517AF7723ED646700D23F72 /* UefiShellNetwork2CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellNetwork2CommandsLib.uni; sourceTree = "<group>"; };
+		3517AF7823ED646700D23F72 /* UefiShellNetwork2CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellNetwork2CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF7923ED646700D23F72 /* UefiShellNetwork2CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellNetwork2CommandsLib.c; sourceTree = "<group>"; };
+		3517AF7B23ED646700D23F72 /* UefiShellInstall1CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellInstall1CommandsLib.c; sourceTree = "<group>"; };
+		3517AF7C23ED646700D23F72 /* UefiShellInstall1CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellInstall1CommandsLib.inf; sourceTree = "<group>"; };
+		3517AF8023ED646700D23F72 /* SratParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SratParser.c; sourceTree = "<group>"; };
+		3517AF8223ED646700D23F72 /* BgrtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BgrtParser.c; sourceTree = "<group>"; };
+		3517AF8423ED646700D23F72 /* DsdtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DsdtParser.c; sourceTree = "<group>"; };
+		3517AF8623ED646700D23F72 /* PpttParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PpttParser.h; sourceTree = "<group>"; };
+		3517AF8723ED646700D23F72 /* PpttParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PpttParser.c; sourceTree = "<group>"; };
+		3517AF8923ED646700D23F72 /* XsdtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = XsdtParser.c; sourceTree = "<group>"; };
+		3517AF8B23ED646700D23F72 /* SsdtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SsdtParser.c; sourceTree = "<group>"; };
+		3517AF8D23ED646700D23F72 /* SlitParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SlitParser.c; sourceTree = "<group>"; };
+		3517AF8F23ED646700D23F72 /* SpcrParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SpcrParser.c; sourceTree = "<group>"; };
+		3517AF9123ED646700D23F72 /* GtdtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GtdtParser.c; sourceTree = "<group>"; };
+		3517AF9323ED646700D23F72 /* MadtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MadtParser.c; sourceTree = "<group>"; };
+		3517AF9423ED646700D23F72 /* MadtParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MadtParser.h; sourceTree = "<group>"; };
+		3517AF9623ED646700D23F72 /* McfgParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = McfgParser.c; sourceTree = "<group>"; };
+		3517AF9823ED646700D23F72 /* FadtParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FadtParser.c; sourceTree = "<group>"; };
+		3517AF9A23ED646700D23F72 /* Dbg2Parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Dbg2Parser.c; sourceTree = "<group>"; };
+		3517AF9C23ED646700D23F72 /* IortParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IortParser.c; sourceTree = "<group>"; };
+		3517AF9E23ED646700D23F72 /* RsdpParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RsdpParser.c; sourceTree = "<group>"; };
+		3517AF9F23ED646700D23F72 /* AcpiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcpiView.h; sourceTree = "<group>"; };
+		3517AFA023ED646700D23F72 /* AcpiTableParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AcpiTableParser.c; sourceTree = "<group>"; };
+		3517AFA123ED646700D23F72 /* AcpiParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AcpiParser.c; sourceTree = "<group>"; };
+		3517AFA223ED646700D23F72 /* UefiShellAcpiViewCommandLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellAcpiViewCommandLib.h; sourceTree = "<group>"; };
+		3517AFA323ED646700D23F72 /* AcpiView.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AcpiView.c; sourceTree = "<group>"; };
+		3517AFA423ED646700D23F72 /* UefiShellAcpiViewCommandLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellAcpiViewCommandLib.uni; sourceTree = "<group>"; };
+		3517AFA523ED646700D23F72 /* UefiShellAcpiViewCommandLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellAcpiViewCommandLib.c; sourceTree = "<group>"; };
+		3517AFA623ED646700D23F72 /* AcpiTableParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcpiTableParser.h; sourceTree = "<group>"; };
+		3517AFA723ED646700D23F72 /* AcpiParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcpiParser.h; sourceTree = "<group>"; };
+		3517AFA823ED646700D23F72 /* UefiShellAcpiViewCommandLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellAcpiViewCommandLib.inf; sourceTree = "<group>"; };
+		3517AFAA23ED646700D23F72 /* Mode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mode.c; sourceTree = "<group>"; };
+		3517AFAB23ED646700D23F72 /* Comp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Comp.c; sourceTree = "<group>"; };
+		3517AFAC23ED646700D23F72 /* EditMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuBar.h; sourceTree = "<group>"; };
+		3517AFAD23ED646700D23F72 /* DmpStore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DmpStore.c; sourceTree = "<group>"; };
+		3517AFAE23ED646700D23F72 /* MemMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MemMap.c; sourceTree = "<group>"; };
+		3517AFAF23ED646700D23F72 /* UefiShellDebug1CommandsLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellDebug1CommandsLib.h; sourceTree = "<group>"; };
+		3517AFB023ED646700D23F72 /* Dmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Dmem.c; sourceTree = "<group>"; };
+		3517AFB123ED646700D23F72 /* EditInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInputBar.h; sourceTree = "<group>"; };
+		3517AFB223ED646700D23F72 /* SetSize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SetSize.c; sourceTree = "<group>"; };
+		3517AFB323ED646700D23F72 /* Compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Compress.c; sourceTree = "<group>"; };
+		3517AFB423ED646700D23F72 /* SetVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SetVar.c; sourceTree = "<group>"; };
+		3517AFB523ED646700D23F72 /* EfiDecompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EfiDecompress.c; sourceTree = "<group>"; };
+		3517AFB623ED646700D23F72 /* Pci.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Pci.c; sourceTree = "<group>"; };
+		3517AFB723ED646700D23F72 /* UefiShellDebug1CommandsLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellDebug1CommandsLib.inf; sourceTree = "<group>"; };
+		3517AFB823ED646700D23F72 /* EditTitleBar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EditTitleBar.c; sourceTree = "<group>"; };
+		3517AFB923ED646700D23F72 /* UefiShellDebug1CommandsLib.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellDebug1CommandsLib.uni; sourceTree = "<group>"; };
+		3517AFBA23ED646700D23F72 /* EditStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStatusBar.h; sourceTree = "<group>"; };
+		3517AFBB23ED646700D23F72 /* EditInputBar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EditInputBar.c; sourceTree = "<group>"; };
+		3517AFBD23ED646700D23F72 /* TextEditorTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorTypes.h; sourceTree = "<group>"; };
+		3517AFBE23ED646700D23F72 /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		3517AFBF23ED646700D23F72 /* FileBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileBuffer.h; sourceTree = "<group>"; };
+		3517AFC023ED646700D23F72 /* MainTextEditor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MainTextEditor.c; sourceTree = "<group>"; };
+		3517AFC123ED646700D23F72 /* Edit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Edit.c; sourceTree = "<group>"; };
+		3517AFC223ED646700D23F72 /* TextEditStrings.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextEditStrings.uni; sourceTree = "<group>"; };
+		3517AFC323ED646700D23F72 /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
+		3517AFC423ED646700D23F72 /* Misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Misc.c; sourceTree = "<group>"; };
+		3517AFC523ED646700D23F72 /* FileBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileBuffer.c; sourceTree = "<group>"; };
+		3517AFC623ED646700D23F72 /* MainTextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTextEditor.h; sourceTree = "<group>"; };
+		3517AFC723ED646700D23F72 /* UefiShellDebug1CommandsLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellDebug1CommandsLib.c; sourceTree = "<group>"; };
+		3517AFC823ED646700D23F72 /* EditMenuBar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EditMenuBar.c; sourceTree = "<group>"; };
+		3517AFCA23ED646800D23F72 /* BufferImage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BufferImage.c; sourceTree = "<group>"; };
+		3517AFCB23ED646800D23F72 /* HexEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexEditor.h; sourceTree = "<group>"; };
+		3517AFCC23ED646800D23F72 /* DiskImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskImage.h; sourceTree = "<group>"; };
+		3517AFCD23ED646800D23F72 /* Clipboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Clipboard.c; sourceTree = "<group>"; };
+		3517AFCE23ED646800D23F72 /* HexeditStrings.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HexeditStrings.uni; sourceTree = "<group>"; };
+		3517AFCF23ED646800D23F72 /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		3517AFD023ED646800D23F72 /* FileImage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileImage.c; sourceTree = "<group>"; };
+		3517AFD123ED646800D23F72 /* MainHexEditor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MainHexEditor.c; sourceTree = "<group>"; };
+		3517AFD223ED646800D23F72 /* MemImage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MemImage.c; sourceTree = "<group>"; };
+		3517AFD323ED646800D23F72 /* HexEdit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HexEdit.c; sourceTree = "<group>"; };
+		3517AFD423ED646800D23F72 /* BufferImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferImage.h; sourceTree = "<group>"; };
+		3517AFD523ED646800D23F72 /* HexEditorTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexEditorTypes.h; sourceTree = "<group>"; };
+		3517AFD623ED646800D23F72 /* DiskImage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DiskImage.c; sourceTree = "<group>"; };
+		3517AFD723ED646800D23F72 /* Clipboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clipboard.h; sourceTree = "<group>"; };
+		3517AFD823ED646800D23F72 /* FileImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileImage.h; sourceTree = "<group>"; };
+		3517AFD923ED646800D23F72 /* Misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Misc.c; sourceTree = "<group>"; };
+		3517AFDA23ED646800D23F72 /* MainHexEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHexEditor.h; sourceTree = "<group>"; };
+		3517AFDB23ED646800D23F72 /* MemImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemImage.h; sourceTree = "<group>"; };
+		3517AFDC23ED646800D23F72 /* Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compress.h; sourceTree = "<group>"; };
+		3517AFDD23ED646800D23F72 /* Mm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mm.c; sourceTree = "<group>"; };
+		3517AFDE23ED646800D23F72 /* SerMode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SerMode.c; sourceTree = "<group>"; };
+		3517AFDF23ED646800D23F72 /* Dblk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Dblk.c; sourceTree = "<group>"; };
+		3517AFE023ED646800D23F72 /* Pci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pci.h; sourceTree = "<group>"; };
+		3517AFE123ED646800D23F72 /* EditStatusBar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EditStatusBar.c; sourceTree = "<group>"; };
+		3517AFE223ED646800D23F72 /* LoadPciRom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LoadPciRom.c; sourceTree = "<group>"; };
+		3517AFE323ED646800D23F72 /* EfiCompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EfiCompress.c; sourceTree = "<group>"; };
+		3517AFE423ED646800D23F72 /* EditTitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTitleBar.h; sourceTree = "<group>"; };
+		3517AFE623ED646800D23F72 /* SmbiosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmbiosView.h; sourceTree = "<group>"; };
+		3517AFE723ED646800D23F72 /* PrintInfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrintInfo.c; sourceTree = "<group>"; };
+		3517AFE823ED646800D23F72 /* QueryTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryTable.h; sourceTree = "<group>"; };
+		3517AFE923ED646800D23F72 /* SmbiosViewStrings.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SmbiosViewStrings.uni; sourceTree = "<group>"; };
+		3517AFEA23ED646800D23F72 /* LibSmbiosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibSmbiosView.h; sourceTree = "<group>"; };
+		3517AFEB23ED646800D23F72 /* EventLogInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventLogInfo.h; sourceTree = "<group>"; };
+		3517AFEC23ED646800D23F72 /* PrintInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintInfo.h; sourceTree = "<group>"; };
+		3517AFED23ED646800D23F72 /* SmbiosView.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmbiosView.c; sourceTree = "<group>"; };
+		3517AFEE23ED646800D23F72 /* LibSmbiosView.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LibSmbiosView.c; sourceTree = "<group>"; };
+		3517AFEF23ED646800D23F72 /* QueryTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QueryTable.c; sourceTree = "<group>"; };
+		3517AFF023ED646800D23F72 /* EventLogInfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EventLogInfo.c; sourceTree = "<group>"; };
+		3517AFF223ED646800D23F72 /* UefiShellLib.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UefiShellLib.inf; sourceTree = "<group>"; };
+		3517AFF323ED646800D23F72 /* UefiShellLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UefiShellLib.c; sourceTree = "<group>"; };
+		3517AFF423ED646800D23F72 /* UefiShellLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UefiShellLib.h; sourceTree = "<group>"; };
+		3517AFF523ED646800D23F72 /* ShellPkg.ci.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = ShellPkg.ci.yaml; sourceTree = "<group>"; };
+		3517AFF823ED646800D23F72 /* ConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleLogger.h; sourceTree = "<group>"; };
+		3517AFF923ED646800D23F72 /* ShellParametersProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellParametersProtocol.h; sourceTree = "<group>"; };
+		3517AFFA23ED646800D23F72 /* FileHandleWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandleWrappers.h; sourceTree = "<group>"; };
+		3517AFFB23ED646800D23F72 /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shell.h; sourceTree = "<group>"; };
+		3517AFFC23ED646800D23F72 /* ConsoleWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleWrappers.h; sourceTree = "<group>"; };
+		3517AFFD23ED646800D23F72 /* ShellManParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellManParser.h; sourceTree = "<group>"; };
+		3517AFFE23ED646800D23F72 /* FileHandleInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandleInternal.h; sourceTree = "<group>"; };
+		3517AFFF23ED646800D23F72 /* ShellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellProtocol.h; sourceTree = "<group>"; };
+		3517B00023ED646800D23F72 /* ShellEnvVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellEnvVar.h; sourceTree = "<group>"; };
+		3517B00123ED646800D23F72 /* FileHandleWrappers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileHandleWrappers.c; sourceTree = "<group>"; };
+		3517B00223ED646800D23F72 /* ShellParametersProtocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellParametersProtocol.c; sourceTree = "<group>"; };
+		3517B00323ED646800D23F72 /* Shell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Shell.c; sourceTree = "<group>"; };
+		3517B00423ED646800D23F72 /* ConsoleLogger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConsoleLogger.c; sourceTree = "<group>"; };
+		3517B00523ED646800D23F72 /* ShellManParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellManParser.c; sourceTree = "<group>"; };
+		3517B00623ED646800D23F72 /* ConsoleWrappers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConsoleWrappers.c; sourceTree = "<group>"; };
+		3517B00723ED646800D23F72 /* Shell.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shell.inf; sourceTree = "<group>"; };
+		3517B00823ED646800D23F72 /* ShellProtocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellProtocol.c; sourceTree = "<group>"; };
+		3517B00923ED646800D23F72 /* Shell.uni */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shell.uni; sourceTree = "<group>"; };
+		3517B00A23ED646800D23F72 /* ShellEnvVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellEnvVar.c; sourceTree = "<group>"; };
+		3517B00C23ED646800D23F72 /* ShellCTestApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellCTestApp.c; sourceTree = "<group>"; };
+		3517B00D23ED646800D23F72 /* TestArgv.nsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestArgv.nsh; sourceTree = "<group>"; };
+		3517B00E23ED646800D23F72 /* ShellCTestApp.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShellCTestApp.inf; sourceTree = "<group>"; };
+		3517B00F23ED646800D23F72 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3517B01023ED646800D23F72 /* TestArgv.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestArgv.log; sourceTree = "<group>"; };
+		3517B01223ED646800D23F72 /* SA.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SA.inf; sourceTree = "<group>"; };
+		3517B01323ED646800D23F72 /* SA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SA.c; sourceTree = "<group>"; };
+		3517B01523ED646800D23F72 /* ShellSortTestApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShellSortTestApp.c; sourceTree = "<group>"; };
+		3517B01623ED646800D23F72 /* ShellSortTestApp.inf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShellSortTestApp.inf; sourceTree = "<group>"; };
+		354F73F822573EBF00AB1A9B /* lib__OpenCoreShell__index.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = lib__OpenCoreShell__index.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		354F73FF22573F0A00AB1A9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		354F740A22573F0A00AB1A9B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		358D567C230D403D00F2894B /* lib__index_OcSupportPkg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = lib__index_OcSupportPkg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		354F73F622573EBF00AB1A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3517AEF223ED646700D23F72 /* ShellPkg */ = {
+			isa = PBXGroup;
+			children = (
+				3517AEF323ED646700D23F72 /* ShellPkg.dsc */,
+				3517AEF423ED646700D23F72 /* ShellPkg.dec */,
+				3517AEF523ED646700D23F72 /* Include */,
+				3517AF0623ED646700D23F72 /* DynamicCommand */,
+				3517AF1C23ED646700D23F72 /* Library */,
+				3517AFF523ED646800D23F72 /* ShellPkg.ci.yaml */,
+				3517AFF623ED646800D23F72 /* Application */,
+			);
+			name = ShellPkg;
+			path = UDK/ShellPkg;
+			sourceTree = "<group>";
+		};
+		3517AEF523ED646700D23F72 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				3517AEF623ED646700D23F72 /* Library */,
+				3517AEFC23ED646700D23F72 /* Protocol */,
+				3517AEFF23ED646700D23F72 /* Guid */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		3517AEF623ED646700D23F72 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3517AEF723ED646700D23F72 /* ShellCEntryLib.h */,
+				3517AEF823ED646700D23F72 /* HandleParsingLib.h */,
+				3517AEF923ED646700D23F72 /* BcfgCommandLib.h */,
+				3517AEFA23ED646700D23F72 /* ShellCommandLib.h */,
+				3517AEFB23ED646700D23F72 /* ShellLib.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3517AEFC23ED646700D23F72 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3517AEFD23ED646700D23F72 /* EfiShellInterface.h */,
+				3517AEFE23ED646700D23F72 /* EfiShellEnvironment2.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3517AEFF23ED646700D23F72 /* Guid */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF0023ED646700D23F72 /* ShellEnvironment2Ext.h */,
+				3517AF0123ED646700D23F72 /* ShellVariableGuid.h */,
+				3517AF0223ED646700D23F72 /* ShellLibHiiGuid.h */,
+				3517AF0323ED646700D23F72 /* ShellAliasGuid.h */,
+				3517AF0423ED646700D23F72 /* ShellMapGuid.h */,
+				3517AF0523ED646700D23F72 /* ShellPkgTokenSpace.h */,
+			);
+			path = Guid;
+			sourceTree = "<group>";
+		};
+		3517AF0623ED646700D23F72 /* DynamicCommand */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF0723ED646700D23F72 /* DpDynamicCommand */,
+				3517AF1423ED646700D23F72 /* TftpDynamicCommand */,
+			);
+			path = DynamicCommand;
+			sourceTree = "<group>";
+		};
+		3517AF0723ED646700D23F72 /* DpDynamicCommand */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF0823ED646700D23F72 /* DpInternal.h */,
+				3517AF0923ED646700D23F72 /* DpTrace.c */,
+				3517AF0A23ED646700D23F72 /* DpApp.c */,
+				3517AF0B23ED646700D23F72 /* Dp.h */,
+				3517AF0C23ED646700D23F72 /* Dp.uni */,
+				3517AF0D23ED646700D23F72 /* DpDynamicCommand.inf */,
+				3517AF0E23ED646700D23F72 /* Literals.h */,
+				3517AF0F23ED646700D23F72 /* DpUtilities.c */,
+				3517AF1023ED646700D23F72 /* Literals.c */,
+				3517AF1123ED646700D23F72 /* DpDynamicCommand.c */,
+				3517AF1223ED646700D23F72 /* DpApp.inf */,
+				3517AF1323ED646700D23F72 /* Dp.c */,
+			);
+			path = DpDynamicCommand;
+			sourceTree = "<group>";
+		};
+		3517AF1423ED646700D23F72 /* TftpDynamicCommand */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF1523ED646700D23F72 /* TftpApp.inf */,
+				3517AF1623ED646700D23F72 /* TftpApp.c */,
+				3517AF1723ED646700D23F72 /* Tftp.c */,
+				3517AF1823ED646700D23F72 /* Tftp.uni */,
+				3517AF1923ED646700D23F72 /* TftpDynamicCommand.inf */,
+				3517AF1A23ED646700D23F72 /* Tftp.h */,
+				3517AF1B23ED646700D23F72 /* TftpDynamicCommand.c */,
+			);
+			path = TftpDynamicCommand;
+			sourceTree = "<group>";
+		};
+		3517AF1C23ED646700D23F72 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF1D23ED646700D23F72 /* UefiShellCommandLib */,
+				3517AF2423ED646700D23F72 /* UefiHandleParsingLib */,
+				3517AF2923ED646700D23F72 /* UefiShellLevel3CommandsLib */,
+				3517AF3723ED646700D23F72 /* UefiShellNetwork1CommandsLib */,
+				3517AF3E23ED646700D23F72 /* UefiShellCEntryLib */,
+				3517AF4123ED646700D23F72 /* UefiShellLevel1CommandsLib */,
+				3517AF4C23ED646700D23F72 /* UefiShellLevel2CommandsLib */,
+				3517AF5F23ED646700D23F72 /* UefiShellBcfgCommandLib */,
+				3517AF6323ED646700D23F72 /* UefiShellDriver1CommandsLib */,
+				3517AF7323ED646700D23F72 /* UefiShellNetwork2CommandsLib */,
+				3517AF7A23ED646700D23F72 /* UefiShellInstall1CommandsLib */,
+				3517AF7D23ED646700D23F72 /* UefiShellAcpiViewCommandLib */,
+				3517AFA923ED646700D23F72 /* UefiShellDebug1CommandsLib */,
+				3517AFF123ED646800D23F72 /* UefiShellLib */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3517AF1D23ED646700D23F72 /* UefiShellCommandLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF1E23ED646700D23F72 /* ConsistMapping.c */,
+				3517AF1F23ED646700D23F72 /* UnicodeCollationEng.c */,
+				3517AF2023ED646700D23F72 /* UefiShellCommandLib.inf */,
+				3517AF2123ED646700D23F72 /* UefiShellCommandLib.h */,
+				3517AF2223ED646700D23F72 /* UnicodeCollationEng.h */,
+				3517AF2323ED646700D23F72 /* UefiShellCommandLib.c */,
+			);
+			path = UefiShellCommandLib;
+			sourceTree = "<group>";
+		};
+		3517AF2423ED646700D23F72 /* UefiHandleParsingLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF2523ED646700D23F72 /* UefiHandleParsingLib.h */,
+				3517AF2623ED646700D23F72 /* UefiHandleParsingLib.inf */,
+				3517AF2723ED646700D23F72 /* UefiHandleParsingLib.uni */,
+				3517AF2823ED646700D23F72 /* UefiHandleParsingLib.c */,
+			);
+			path = UefiHandleParsingLib;
+			sourceTree = "<group>";
+		};
+		3517AF2923ED646700D23F72 /* UefiShellLevel3CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF2A23ED646700D23F72 /* GetMtc.c */,
+				3517AF2B23ED646700D23F72 /* UefiShellLevel3CommandsLib.inf */,
+				3517AF2C23ED646700D23F72 /* UefiShellLevel3CommandsLib.h */,
+				3517AF2D23ED646700D23F72 /* UefiShellLevel3CommandsLib.uni */,
+				3517AF2E23ED646700D23F72 /* Help.c */,
+				3517AF2F23ED646700D23F72 /* Type.c */,
+				3517AF3023ED646700D23F72 /* Alias.c */,
+				3517AF3123ED646700D23F72 /* Cls.c */,
+				3517AF3223ED646700D23F72 /* Ver.c */,
+				3517AF3323ED646700D23F72 /* Touch.c */,
+				3517AF3423ED646700D23F72 /* Pause.c */,
+				3517AF3523ED646700D23F72 /* UefiShellLevel3CommandsLib.c */,
+				3517AF3623ED646700D23F72 /* Echo.c */,
+			);
+			path = UefiShellLevel3CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF3723ED646700D23F72 /* UefiShellNetwork1CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF3823ED646700D23F72 /* UefiShellNetwork1CommandsLib.c */,
+				3517AF3923ED646700D23F72 /* Ping.c */,
+				3517AF3A23ED646700D23F72 /* UefiShellNetwork1CommandsLib.h */,
+				3517AF3B23ED646700D23F72 /* UefiShellNetwork1CommandsLib.uni */,
+				3517AF3C23ED646700D23F72 /* UefiShellNetwork1CommandsLib.inf */,
+				3517AF3D23ED646700D23F72 /* Ifconfig.c */,
+			);
+			path = UefiShellNetwork1CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF3E23ED646700D23F72 /* UefiShellCEntryLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF3F23ED646700D23F72 /* UefiShellCEntryLib.c */,
+				3517AF4023ED646700D23F72 /* UefiShellCEntryLib.inf */,
+			);
+			path = UefiShellCEntryLib;
+			sourceTree = "<group>";
+		};
+		3517AF4123ED646700D23F72 /* UefiShellLevel1CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF4223ED646700D23F72 /* Stall.c */,
+				3517AF4323ED646700D23F72 /* UefiShellLevel1CommandsLib.uni */,
+				3517AF4423ED646700D23F72 /* UefiShellLevel1CommandsLib.c */,
+				3517AF4523ED646700D23F72 /* Shift.c */,
+				3517AF4623ED646700D23F72 /* UefiShellLevel1CommandsLib.inf */,
+				3517AF4723ED646700D23F72 /* Exit.c */,
+				3517AF4823ED646700D23F72 /* If.c */,
+				3517AF4923ED646700D23F72 /* UefiShellLevel1CommandsLib.h */,
+				3517AF4A23ED646700D23F72 /* For.c */,
+				3517AF4B23ED646700D23F72 /* Goto.c */,
+			);
+			path = UefiShellLevel1CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF4C23ED646700D23F72 /* UefiShellLevel2CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF4D23ED646700D23F72 /* Cp.c */,
+				3517AF4E23ED646700D23F72 /* Ls.c */,
+				3517AF4F23ED646700D23F72 /* Vol.c */,
+				3517AF5023ED646700D23F72 /* UefiShellLevel2CommandsLib.uni */,
+				3517AF5123ED646700D23F72 /* UefiShellLevel2CommandsLib.h */,
+				3517AF5223ED646700D23F72 /* Rm.c */,
+				3517AF5323ED646700D23F72 /* Set.c */,
+				3517AF5423ED646700D23F72 /* UefiShellLevel2CommandsLib.inf */,
+				3517AF5523ED646700D23F72 /* Reset.c */,
+				3517AF5623ED646700D23F72 /* MkDir.c */,
+				3517AF5723ED646700D23F72 /* Map.c */,
+				3517AF5823ED646700D23F72 /* Cd.c */,
+				3517AF5923ED646700D23F72 /* Attrib.c */,
+				3517AF5A23ED646700D23F72 /* Mv.c */,
+				3517AF5B23ED646700D23F72 /* UefiShellLevel2CommandsLib.c */,
+				3517AF5C23ED646700D23F72 /* Parse.c */,
+				3517AF5D23ED646700D23F72 /* Load.c */,
+				3517AF5E23ED646700D23F72 /* TimeDate.c */,
+			);
+			path = UefiShellLevel2CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF5F23ED646700D23F72 /* UefiShellBcfgCommandLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF6023ED646700D23F72 /* UefiShellBcfgCommandLib.uni */,
+				3517AF6123ED646700D23F72 /* UefiShellBcfgCommandLib.inf */,
+				3517AF6223ED646700D23F72 /* UefiShellBcfgCommandLib.c */,
+			);
+			path = UefiShellBcfgCommandLib;
+			sourceTree = "<group>";
+		};
+		3517AF6323ED646700D23F72 /* UefiShellDriver1CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF6423ED646700D23F72 /* DevTree.c */,
+				3517AF6523ED646700D23F72 /* Drivers.c */,
+				3517AF6623ED646700D23F72 /* Unload.c */,
+				3517AF6723ED646700D23F72 /* DrvCfg.c */,
+				3517AF6823ED646700D23F72 /* Reconnect.c */,
+				3517AF6923ED646700D23F72 /* Disconnect.c */,
+				3517AF6A23ED646700D23F72 /* DrvDiag.c */,
+				3517AF6B23ED646700D23F72 /* UefiShellDriver1CommandsLib.h */,
+				3517AF6C23ED646700D23F72 /* OpenInfo.c */,
+				3517AF6D23ED646700D23F72 /* Devices.c */,
+				3517AF6E23ED646700D23F72 /* UefiShellDriver1CommandsLib.inf */,
+				3517AF6F23ED646700D23F72 /* UefiShellDriver1CommandsLib.uni */,
+				3517AF7023ED646700D23F72 /* Connect.c */,
+				3517AF7123ED646700D23F72 /* Dh.c */,
+				3517AF7223ED646700D23F72 /* UefiShellDriver1CommandsLib.c */,
+			);
+			path = UefiShellDriver1CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF7323ED646700D23F72 /* UefiShellNetwork2CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF7423ED646700D23F72 /* UefiShellNetwork2CommandsLib.h */,
+				3517AF7523ED646700D23F72 /* Ifconfig6.c */,
+				3517AF7623ED646700D23F72 /* Ping6.c */,
+				3517AF7723ED646700D23F72 /* UefiShellNetwork2CommandsLib.uni */,
+				3517AF7823ED646700D23F72 /* UefiShellNetwork2CommandsLib.inf */,
+				3517AF7923ED646700D23F72 /* UefiShellNetwork2CommandsLib.c */,
+			);
+			path = UefiShellNetwork2CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF7A23ED646700D23F72 /* UefiShellInstall1CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF7B23ED646700D23F72 /* UefiShellInstall1CommandsLib.c */,
+				3517AF7C23ED646700D23F72 /* UefiShellInstall1CommandsLib.inf */,
+			);
+			path = UefiShellInstall1CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AF7D23ED646700D23F72 /* UefiShellAcpiViewCommandLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF7E23ED646700D23F72 /* Parsers */,
+				3517AF9F23ED646700D23F72 /* AcpiView.h */,
+				3517AFA023ED646700D23F72 /* AcpiTableParser.c */,
+				3517AFA123ED646700D23F72 /* AcpiParser.c */,
+				3517AFA223ED646700D23F72 /* UefiShellAcpiViewCommandLib.h */,
+				3517AFA323ED646700D23F72 /* AcpiView.c */,
+				3517AFA423ED646700D23F72 /* UefiShellAcpiViewCommandLib.uni */,
+				3517AFA523ED646700D23F72 /* UefiShellAcpiViewCommandLib.c */,
+				3517AFA623ED646700D23F72 /* AcpiTableParser.h */,
+				3517AFA723ED646700D23F72 /* AcpiParser.h */,
+				3517AFA823ED646700D23F72 /* UefiShellAcpiViewCommandLib.inf */,
+			);
+			path = UefiShellAcpiViewCommandLib;
+			sourceTree = "<group>";
+		};
+		3517AF7E23ED646700D23F72 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF7F23ED646700D23F72 /* Srat */,
+				3517AF8123ED646700D23F72 /* Bgrt */,
+				3517AF8323ED646700D23F72 /* Dsdt */,
+				3517AF8523ED646700D23F72 /* Pptt */,
+				3517AF8823ED646700D23F72 /* Xsdt */,
+				3517AF8A23ED646700D23F72 /* Ssdt */,
+				3517AF8C23ED646700D23F72 /* Slit */,
+				3517AF8E23ED646700D23F72 /* Spcr */,
+				3517AF9023ED646700D23F72 /* Gtdt */,
+				3517AF9223ED646700D23F72 /* Madt */,
+				3517AF9523ED646700D23F72 /* Mcfg */,
+				3517AF9723ED646700D23F72 /* Fadt */,
+				3517AF9923ED646700D23F72 /* Dbg2 */,
+				3517AF9B23ED646700D23F72 /* Iort */,
+				3517AF9D23ED646700D23F72 /* Rsdp */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		3517AF7F23ED646700D23F72 /* Srat */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8023ED646700D23F72 /* SratParser.c */,
+			);
+			path = Srat;
+			sourceTree = "<group>";
+		};
+		3517AF8123ED646700D23F72 /* Bgrt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8223ED646700D23F72 /* BgrtParser.c */,
+			);
+			path = Bgrt;
+			sourceTree = "<group>";
+		};
+		3517AF8323ED646700D23F72 /* Dsdt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8423ED646700D23F72 /* DsdtParser.c */,
+			);
+			path = Dsdt;
+			sourceTree = "<group>";
+		};
+		3517AF8523ED646700D23F72 /* Pptt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8623ED646700D23F72 /* PpttParser.h */,
+				3517AF8723ED646700D23F72 /* PpttParser.c */,
+			);
+			path = Pptt;
+			sourceTree = "<group>";
+		};
+		3517AF8823ED646700D23F72 /* Xsdt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8923ED646700D23F72 /* XsdtParser.c */,
+			);
+			path = Xsdt;
+			sourceTree = "<group>";
+		};
+		3517AF8A23ED646700D23F72 /* Ssdt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8B23ED646700D23F72 /* SsdtParser.c */,
+			);
+			path = Ssdt;
+			sourceTree = "<group>";
+		};
+		3517AF8C23ED646700D23F72 /* Slit */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8D23ED646700D23F72 /* SlitParser.c */,
+			);
+			path = Slit;
+			sourceTree = "<group>";
+		};
+		3517AF8E23ED646700D23F72 /* Spcr */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF8F23ED646700D23F72 /* SpcrParser.c */,
+			);
+			path = Spcr;
+			sourceTree = "<group>";
+		};
+		3517AF9023ED646700D23F72 /* Gtdt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9123ED646700D23F72 /* GtdtParser.c */,
+			);
+			path = Gtdt;
+			sourceTree = "<group>";
+		};
+		3517AF9223ED646700D23F72 /* Madt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9323ED646700D23F72 /* MadtParser.c */,
+				3517AF9423ED646700D23F72 /* MadtParser.h */,
+			);
+			path = Madt;
+			sourceTree = "<group>";
+		};
+		3517AF9523ED646700D23F72 /* Mcfg */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9623ED646700D23F72 /* McfgParser.c */,
+			);
+			path = Mcfg;
+			sourceTree = "<group>";
+		};
+		3517AF9723ED646700D23F72 /* Fadt */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9823ED646700D23F72 /* FadtParser.c */,
+			);
+			path = Fadt;
+			sourceTree = "<group>";
+		};
+		3517AF9923ED646700D23F72 /* Dbg2 */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9A23ED646700D23F72 /* Dbg2Parser.c */,
+			);
+			path = Dbg2;
+			sourceTree = "<group>";
+		};
+		3517AF9B23ED646700D23F72 /* Iort */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9C23ED646700D23F72 /* IortParser.c */,
+			);
+			path = Iort;
+			sourceTree = "<group>";
+		};
+		3517AF9D23ED646700D23F72 /* Rsdp */ = {
+			isa = PBXGroup;
+			children = (
+				3517AF9E23ED646700D23F72 /* RsdpParser.c */,
+			);
+			path = Rsdp;
+			sourceTree = "<group>";
+		};
+		3517AFA923ED646700D23F72 /* UefiShellDebug1CommandsLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFAA23ED646700D23F72 /* Mode.c */,
+				3517AFAB23ED646700D23F72 /* Comp.c */,
+				3517AFAC23ED646700D23F72 /* EditMenuBar.h */,
+				3517AFAD23ED646700D23F72 /* DmpStore.c */,
+				3517AFAE23ED646700D23F72 /* MemMap.c */,
+				3517AFAF23ED646700D23F72 /* UefiShellDebug1CommandsLib.h */,
+				3517AFB023ED646700D23F72 /* Dmem.c */,
+				3517AFB123ED646700D23F72 /* EditInputBar.h */,
+				3517AFB223ED646700D23F72 /* SetSize.c */,
+				3517AFB323ED646700D23F72 /* Compress.c */,
+				3517AFB423ED646700D23F72 /* SetVar.c */,
+				3517AFB523ED646700D23F72 /* EfiDecompress.c */,
+				3517AFB623ED646700D23F72 /* Pci.c */,
+				3517AFB723ED646700D23F72 /* UefiShellDebug1CommandsLib.inf */,
+				3517AFB823ED646700D23F72 /* EditTitleBar.c */,
+				3517AFB923ED646700D23F72 /* UefiShellDebug1CommandsLib.uni */,
+				3517AFBA23ED646700D23F72 /* EditStatusBar.h */,
+				3517AFBB23ED646700D23F72 /* EditInputBar.c */,
+				3517AFBC23ED646700D23F72 /* Edit */,
+				3517AFC723ED646700D23F72 /* UefiShellDebug1CommandsLib.c */,
+				3517AFC823ED646700D23F72 /* EditMenuBar.c */,
+				3517AFC923ED646700D23F72 /* HexEdit */,
+				3517AFDC23ED646800D23F72 /* Compress.h */,
+				3517AFDD23ED646800D23F72 /* Mm.c */,
+				3517AFDE23ED646800D23F72 /* SerMode.c */,
+				3517AFDF23ED646800D23F72 /* Dblk.c */,
+				3517AFE023ED646800D23F72 /* Pci.h */,
+				3517AFE123ED646800D23F72 /* EditStatusBar.c */,
+				3517AFE223ED646800D23F72 /* LoadPciRom.c */,
+				3517AFE323ED646800D23F72 /* EfiCompress.c */,
+				3517AFE423ED646800D23F72 /* EditTitleBar.h */,
+				3517AFE523ED646800D23F72 /* SmbiosView */,
+			);
+			path = UefiShellDebug1CommandsLib;
+			sourceTree = "<group>";
+		};
+		3517AFBC23ED646700D23F72 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFBD23ED646700D23F72 /* TextEditorTypes.h */,
+				3517AFBE23ED646700D23F72 /* Misc.h */,
+				3517AFBF23ED646700D23F72 /* FileBuffer.h */,
+				3517AFC023ED646700D23F72 /* MainTextEditor.c */,
+				3517AFC123ED646700D23F72 /* Edit.c */,
+				3517AFC223ED646700D23F72 /* TextEditStrings.uni */,
+				3517AFC323ED646700D23F72 /* TextEditor.h */,
+				3517AFC423ED646700D23F72 /* Misc.c */,
+				3517AFC523ED646700D23F72 /* FileBuffer.c */,
+				3517AFC623ED646700D23F72 /* MainTextEditor.h */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		3517AFC923ED646700D23F72 /* HexEdit */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFCA23ED646800D23F72 /* BufferImage.c */,
+				3517AFCB23ED646800D23F72 /* HexEditor.h */,
+				3517AFCC23ED646800D23F72 /* DiskImage.h */,
+				3517AFCD23ED646800D23F72 /* Clipboard.c */,
+				3517AFCE23ED646800D23F72 /* HexeditStrings.uni */,
+				3517AFCF23ED646800D23F72 /* Misc.h */,
+				3517AFD023ED646800D23F72 /* FileImage.c */,
+				3517AFD123ED646800D23F72 /* MainHexEditor.c */,
+				3517AFD223ED646800D23F72 /* MemImage.c */,
+				3517AFD323ED646800D23F72 /* HexEdit.c */,
+				3517AFD423ED646800D23F72 /* BufferImage.h */,
+				3517AFD523ED646800D23F72 /* HexEditorTypes.h */,
+				3517AFD623ED646800D23F72 /* DiskImage.c */,
+				3517AFD723ED646800D23F72 /* Clipboard.h */,
+				3517AFD823ED646800D23F72 /* FileImage.h */,
+				3517AFD923ED646800D23F72 /* Misc.c */,
+				3517AFDA23ED646800D23F72 /* MainHexEditor.h */,
+				3517AFDB23ED646800D23F72 /* MemImage.h */,
+			);
+			path = HexEdit;
+			sourceTree = "<group>";
+		};
+		3517AFE523ED646800D23F72 /* SmbiosView */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFE623ED646800D23F72 /* SmbiosView.h */,
+				3517AFE723ED646800D23F72 /* PrintInfo.c */,
+				3517AFE823ED646800D23F72 /* QueryTable.h */,
+				3517AFE923ED646800D23F72 /* SmbiosViewStrings.uni */,
+				3517AFEA23ED646800D23F72 /* LibSmbiosView.h */,
+				3517AFEB23ED646800D23F72 /* EventLogInfo.h */,
+				3517AFEC23ED646800D23F72 /* PrintInfo.h */,
+				3517AFED23ED646800D23F72 /* SmbiosView.c */,
+				3517AFEE23ED646800D23F72 /* LibSmbiosView.c */,
+				3517AFEF23ED646800D23F72 /* QueryTable.c */,
+				3517AFF023ED646800D23F72 /* EventLogInfo.c */,
+			);
+			path = SmbiosView;
+			sourceTree = "<group>";
+		};
+		3517AFF123ED646800D23F72 /* UefiShellLib */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFF223ED646800D23F72 /* UefiShellLib.inf */,
+				3517AFF323ED646800D23F72 /* UefiShellLib.c */,
+				3517AFF423ED646800D23F72 /* UefiShellLib.h */,
+			);
+			path = UefiShellLib;
+			sourceTree = "<group>";
+		};
+		3517AFF623ED646800D23F72 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFF723ED646800D23F72 /* Shell */,
+				3517B00B23ED646800D23F72 /* ShellCTestApp */,
+				3517B01123ED646800D23F72 /* ShellExecTestApp */,
+				3517B01423ED646800D23F72 /* ShellSortTestApp */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3517AFF723ED646800D23F72 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				3517AFF823ED646800D23F72 /* ConsoleLogger.h */,
+				3517AFF923ED646800D23F72 /* ShellParametersProtocol.h */,
+				3517AFFA23ED646800D23F72 /* FileHandleWrappers.h */,
+				3517AFFB23ED646800D23F72 /* Shell.h */,
+				3517AFFC23ED646800D23F72 /* ConsoleWrappers.h */,
+				3517AFFD23ED646800D23F72 /* ShellManParser.h */,
+				3517AFFE23ED646800D23F72 /* FileHandleInternal.h */,
+				3517AFFF23ED646800D23F72 /* ShellProtocol.h */,
+				3517B00023ED646800D23F72 /* ShellEnvVar.h */,
+				3517B00123ED646800D23F72 /* FileHandleWrappers.c */,
+				3517B00223ED646800D23F72 /* ShellParametersProtocol.c */,
+				3517B00323ED646800D23F72 /* Shell.c */,
+				3517B00423ED646800D23F72 /* ConsoleLogger.c */,
+				3517B00523ED646800D23F72 /* ShellManParser.c */,
+				3517B00623ED646800D23F72 /* ConsoleWrappers.c */,
+				3517B00723ED646800D23F72 /* Shell.inf */,
+				3517B00823ED646800D23F72 /* ShellProtocol.c */,
+				3517B00923ED646800D23F72 /* Shell.uni */,
+				3517B00A23ED646800D23F72 /* ShellEnvVar.c */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		3517B00B23ED646800D23F72 /* ShellCTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				3517B00C23ED646800D23F72 /* ShellCTestApp.c */,
+				3517B00D23ED646800D23F72 /* TestArgv.nsh */,
+				3517B00E23ED646800D23F72 /* ShellCTestApp.inf */,
+				3517B00F23ED646800D23F72 /* README.txt */,
+				3517B01023ED646800D23F72 /* TestArgv.log */,
+			);
+			path = ShellCTestApp;
+			sourceTree = "<group>";
+		};
+		3517B01123ED646800D23F72 /* ShellExecTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				3517B01223ED646800D23F72 /* SA.inf */,
+				3517B01323ED646800D23F72 /* SA.c */,
+			);
+			path = ShellExecTestApp;
+			sourceTree = "<group>";
+		};
+		3517B01423ED646800D23F72 /* ShellSortTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				3517B01523ED646800D23F72 /* ShellSortTestApp.c */,
+				3517B01623ED646800D23F72 /* ShellSortTestApp.inf */,
+			);
+			path = ShellSortTestApp;
+			sourceTree = "<group>";
+		};
+		354F73E922573DE700AB1A9B = {
+			isa = PBXGroup;
+			children = (
+				3517AEF223ED646700D23F72 /* ShellPkg */,
+				3517565323ED612C00D23F72 /* Patches */,
+				3517565423ED612C00D23F72 /* UDK */,
+				354F740A22573F0A00AB1A9B /* LICENSE.txt */,
+				354F73FF22573F0A00AB1A9B /* README.md */,
+				354F73F922573EBF00AB1A9B /* Products */,
+				358D567B230D403D00F2894B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		354F73F922573EBF00AB1A9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354F73F822573EBF00AB1A9B /* lib__OpenCoreShell__index.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		358D567B230D403D00F2894B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				358D567C230D403D00F2894B /* lib__index_OcSupportPkg.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		354F73F422573EBF00AB1A9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517B02823ED646800D23F72 /* Literals.h in Headers */,
+				3517B07E23ED646800D23F72 /* MadtParser.h in Headers */,
+				3517B01D23ED646800D23F72 /* EfiShellEnvironment2.h in Headers */,
+				3517B01C23ED646800D23F72 /* EfiShellInterface.h in Headers */,
+				3517B0CD23ED646900D23F72 /* ConsoleLogger.h in Headers */,
+				3517B07623ED646800D23F72 /* PpttParser.h in Headers */,
+				3517B0B123ED646900D23F72 /* HexEditorTypes.h in Headers */,
+				3517B01723ED646800D23F72 /* ShellCEntryLib.h in Headers */,
+				3517B03623ED646800D23F72 /* UefiHandleParsingLib.h in Headers */,
+				3517B0A423ED646900D23F72 /* MainTextEditor.h in Headers */,
+				3517B02123ED646800D23F72 /* ShellAliasGuid.h in Headers */,
+				3517B06823ED646800D23F72 /* UefiShellDriver1CommandsLib.h in Headers */,
+				3517B05323ED646800D23F72 /* UefiShellLevel2CommandsLib.h in Headers */,
+				3517B01A23ED646800D23F72 /* ShellCommandLib.h in Headers */,
+				3517B0D123ED646900D23F72 /* ConsoleWrappers.h in Headers */,
+				3517B0B023ED646900D23F72 /* BufferImage.h in Headers */,
+				3517B0B723ED646900D23F72 /* MemImage.h in Headers */,
+				3517B03423ED646800D23F72 /* UnicodeCollationEng.h in Headers */,
+				3517B0D423ED646900D23F72 /* ShellProtocol.h in Headers */,
+				3517B09A23ED646800D23F72 /* EditStatusBar.h in Headers */,
+				3517B08B23ED646800D23F72 /* AcpiParser.h in Headers */,
+				3517B01E23ED646800D23F72 /* ShellEnvironment2Ext.h in Headers */,
+				3517B0B323ED646900D23F72 /* Clipboard.h in Headers */,
+				3517B02723ED646800D23F72 /* Dp.h in Headers */,
+				3517B08E23ED646800D23F72 /* EditMenuBar.h in Headers */,
+				3517B0D223ED646900D23F72 /* ShellManParser.h in Headers */,
+				3517B01923ED646800D23F72 /* BcfgCommandLib.h in Headers */,
+				3517B0C523ED646900D23F72 /* EventLogInfo.h in Headers */,
+				3517B09323ED646800D23F72 /* EditInputBar.h in Headers */,
+				3517B0B823ED646900D23F72 /* Compress.h in Headers */,
+				3517B0D023ED646900D23F72 /* Shell.h in Headers */,
+				3517B0AB23ED646900D23F72 /* Misc.h in Headers */,
+				3517B08A23ED646800D23F72 /* AcpiTableParser.h in Headers */,
+				3517B02223ED646800D23F72 /* ShellMapGuid.h in Headers */,
+				3517B04D23ED646800D23F72 /* UefiShellLevel1CommandsLib.h in Headers */,
+				3517B0CC23ED646900D23F72 /* UefiShellLib.h in Headers */,
+				3517B03323ED646800D23F72 /* UefiShellCommandLib.h in Headers */,
+				3517B01823ED646800D23F72 /* HandleParsingLib.h in Headers */,
+				3517B0A923ED646900D23F72 /* DiskImage.h in Headers */,
+				3517B03923ED646800D23F72 /* UefiShellLevel3CommandsLib.h in Headers */,
+				3517B04523ED646800D23F72 /* UefiShellNetwork1CommandsLib.h in Headers */,
+				3517B0C023ED646900D23F72 /* EditTitleBar.h in Headers */,
+				3517B0B623ED646900D23F72 /* MainHexEditor.h in Headers */,
+				3517B0C423ED646900D23F72 /* LibSmbiosView.h in Headers */,
+				3517B0CE23ED646900D23F72 /* ShellParametersProtocol.h in Headers */,
+				3517B02323ED646800D23F72 /* ShellPkgTokenSpace.h in Headers */,
+				3517B09C23ED646800D23F72 /* TextEditorTypes.h in Headers */,
+				3517B09D23ED646800D23F72 /* Misc.h in Headers */,
+				3517B0CF23ED646900D23F72 /* FileHandleWrappers.h in Headers */,
+				3517B0C323ED646900D23F72 /* QueryTable.h in Headers */,
+				3517B06E23ED646800D23F72 /* UefiShellNetwork2CommandsLib.h in Headers */,
+				3517B0B423ED646900D23F72 /* FileImage.h in Headers */,
+				3517B0A123ED646900D23F72 /* TextEditor.h in Headers */,
+				3517B0D523ED646900D23F72 /* ShellEnvVar.h in Headers */,
+				3517B0C123ED646900D23F72 /* SmbiosView.h in Headers */,
+				3517B02F23ED646800D23F72 /* Tftp.h in Headers */,
+				3517B08723ED646800D23F72 /* UefiShellAcpiViewCommandLib.h in Headers */,
+				3517B02023ED646800D23F72 /* ShellLibHiiGuid.h in Headers */,
+				3517B09E23ED646800D23F72 /* FileBuffer.h in Headers */,
+				3517B0C623ED646900D23F72 /* PrintInfo.h in Headers */,
+				3517B08423ED646800D23F72 /* AcpiView.h in Headers */,
+				3517B0D323ED646900D23F72 /* FileHandleInternal.h in Headers */,
+				3517B09123ED646800D23F72 /* UefiShellDebug1CommandsLib.h in Headers */,
+				3517B02423ED646800D23F72 /* DpInternal.h in Headers */,
+				3517B0A823ED646900D23F72 /* HexEditor.h in Headers */,
+				3517B01F23ED646800D23F72 /* ShellVariableGuid.h in Headers */,
+				3517B01B23ED646800D23F72 /* ShellLib.h in Headers */,
+				3517B0BC23ED646900D23F72 /* Pci.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		354F73EE22573DE700AB1A9B /* OpenCoreShell */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = 354F73F122573DE700AB1A9B /* Build configuration list for PBXLegacyTarget "OpenCoreShell" */;
+			buildPhases = (
+			);
+			buildToolPath = "$(SRCROOT)/macbuild.tool";
+			buildWorkingDirectory = "$(SRCROOT)/..";
+			dependencies = (
+			);
+			name = OpenCoreShell;
+			passBuildSettingsInEnvironment = 0;
+			productName = OpenCorePkg;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		354F73F722573EBF00AB1A9B /* __OpenCoreShell__index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354F73FA22573EBF00AB1A9B /* Build configuration list for PBXNativeTarget "__OpenCoreShell__index" */;
+			buildPhases = (
+				354F73F422573EBF00AB1A9B /* Headers */,
+				354F73F522573EBF00AB1A9B /* Sources */,
+				354F73F622573EBF00AB1A9B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = __OpenCoreShell__index;
+			productName = __OpenCorePkg__index;
+			productReference = 354F73F822573EBF00AB1A9B /* lib__OpenCoreShell__index.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		354F73EA22573DE700AB1A9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = acidanthera;
+				TargetAttributes = {
+					354F73EE22573DE700AB1A9B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					354F73F722573EBF00AB1A9B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 354F73ED22573DE700AB1A9B /* Build configuration list for PBXProject "OpenCoreShell" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 354F73E922573DE700AB1A9B;
+			productRefGroup = 354F73F922573EBF00AB1A9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				354F73EE22573DE700AB1A9B /* OpenCoreShell */,
+				354F73F722573EBF00AB1A9B /* __OpenCoreShell__index */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		354F73F522573EBF00AB1A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3517B07A23ED646800D23F72 /* SlitParser.c in Sources */,
+				3517B05823ED646800D23F72 /* Map.c in Sources */,
+				3517B07B23ED646800D23F72 /* SpcrParser.c in Sources */,
+				3517B09723ED646800D23F72 /* EfiDecompress.c in Sources */,
+				3517B04E23ED646800D23F72 /* For.c in Sources */,
+				3517B03023ED646800D23F72 /* TftpDynamicCommand.c in Sources */,
+				3517B09423ED646800D23F72 /* SetSize.c in Sources */,
+				3517B0C723ED646900D23F72 /* SmbiosView.c in Sources */,
+				3517B0BF23ED646900D23F72 /* EfiCompress.c in Sources */,
+				3517B04723ED646800D23F72 /* UefiShellCEntryLib.c in Sources */,
+				3517B06B23ED646800D23F72 /* Connect.c in Sources */,
+				3517B03523ED646800D23F72 /* UefiShellCommandLib.c in Sources */,
+				3517B0D823ED646900D23F72 /* Shell.c in Sources */,
+				3517B05423ED646800D23F72 /* Rm.c in Sources */,
+				3517B0A723ED646900D23F72 /* BufferImage.c in Sources */,
+				3517B06523ED646800D23F72 /* Reconnect.c in Sources */,
+				3517B07923ED646800D23F72 /* SsdtParser.c in Sources */,
+				3517B07723ED646800D23F72 /* PpttParser.c in Sources */,
+				3517B06623ED646800D23F72 /* Disconnect.c in Sources */,
+				3517B0A223ED646900D23F72 /* Misc.c in Sources */,
+				3517B0A623ED646900D23F72 /* EditMenuBar.c in Sources */,
+				3517B05123ED646800D23F72 /* Ls.c in Sources */,
+				3517B0DC23ED646900D23F72 /* ShellProtocol.c in Sources */,
+				3517B02B23ED646800D23F72 /* DpDynamicCommand.c in Sources */,
+				3517B08823ED646800D23F72 /* AcpiView.c in Sources */,
+				3517B04C23ED646800D23F72 /* If.c in Sources */,
+				3517B08123ED646800D23F72 /* Dbg2Parser.c in Sources */,
+				3517B0AC23ED646900D23F72 /* FileImage.c in Sources */,
+				3517B05F23ED646800D23F72 /* TimeDate.c in Sources */,
+				3517B0CA23ED646900D23F72 /* EventLogInfo.c in Sources */,
+				3517B08923ED646800D23F72 /* UefiShellAcpiViewCommandLib.c in Sources */,
+				3517B07223ED646800D23F72 /* UefiShellInstall1CommandsLib.c in Sources */,
+				3517B03E23ED646800D23F72 /* Ver.c in Sources */,
+				3517B0C223ED646900D23F72 /* PrintInfo.c in Sources */,
+				3517B04123ED646800D23F72 /* UefiShellLevel3CommandsLib.c in Sources */,
+				3517B0DA23ED646900D23F72 /* ShellManParser.c in Sources */,
+				3517B03723ED646800D23F72 /* UefiHandleParsingLib.c in Sources */,
+				3517B07323ED646800D23F72 /* SratParser.c in Sources */,
+				3517B0B923ED646900D23F72 /* Mm.c in Sources */,
+				3517B05923ED646800D23F72 /* Cd.c in Sources */,
+				3517B08023ED646800D23F72 /* FadtParser.c in Sources */,
+				3517B07F23ED646800D23F72 /* McfgParser.c in Sources */,
+				3517B0B523ED646900D23F72 /* Misc.c in Sources */,
+				3517B04B23ED646800D23F72 /* Exit.c in Sources */,
+				3517B0D723ED646900D23F72 /* ShellParametersProtocol.c in Sources */,
+				3517B02523ED646800D23F72 /* DpTrace.c in Sources */,
+				3517B09F23ED646900D23F72 /* MainTextEditor.c in Sources */,
+				3517B09223ED646800D23F72 /* Dmem.c in Sources */,
+				3517B05A23ED646800D23F72 /* Attrib.c in Sources */,
+				3517B09823ED646800D23F72 /* Pci.c in Sources */,
+				3517B08323ED646800D23F72 /* RsdpParser.c in Sources */,
+				3517B02923ED646800D23F72 /* DpUtilities.c in Sources */,
+				3517B09523ED646800D23F72 /* Compress.c in Sources */,
+				3517B03D23ED646800D23F72 /* Cls.c in Sources */,
+				3517B02623ED646800D23F72 /* DpApp.c in Sources */,
+				3517B06C23ED646800D23F72 /* Dh.c in Sources */,
+				3517B0E023ED646900D23F72 /* ShellSortTestApp.c in Sources */,
+				3517B08523ED646800D23F72 /* AcpiTableParser.c in Sources */,
+				3517B09623ED646800D23F72 /* SetVar.c in Sources */,
+				3517B02D23ED646800D23F72 /* TftpApp.c in Sources */,
+				3517B0DF23ED646900D23F72 /* SA.c in Sources */,
+				3517B06A23ED646800D23F72 /* Devices.c in Sources */,
+				3517B06323ED646800D23F72 /* Unload.c in Sources */,
+				3517B07423ED646800D23F72 /* BgrtParser.c in Sources */,
+				3517B06223ED646800D23F72 /* Drivers.c in Sources */,
+				3517B08C23ED646800D23F72 /* Mode.c in Sources */,
+				3517B0DE23ED646900D23F72 /* ShellCTestApp.c in Sources */,
+				3517B07023ED646800D23F72 /* Ping6.c in Sources */,
+				3517B04923ED646800D23F72 /* UefiShellLevel1CommandsLib.c in Sources */,
+				3517B04823ED646800D23F72 /* Stall.c in Sources */,
+				3517B05723ED646800D23F72 /* MkDir.c in Sources */,
+				3517B0AA23ED646900D23F72 /* Clipboard.c in Sources */,
+				3517B0D623ED646900D23F72 /* FileHandleWrappers.c in Sources */,
+				3517B0AD23ED646900D23F72 /* MainHexEditor.c in Sources */,
+				3517B05E23ED646800D23F72 /* Load.c in Sources */,
+				3517B0BE23ED646900D23F72 /* LoadPciRom.c in Sources */,
+				3517B02E23ED646800D23F72 /* Tftp.c in Sources */,
+				3517B05D23ED646800D23F72 /* Parse.c in Sources */,
+				3517B07523ED646800D23F72 /* DsdtParser.c in Sources */,
+				3517B05223ED646800D23F72 /* Vol.c in Sources */,
+				3517B0DD23ED646900D23F72 /* ShellEnvVar.c in Sources */,
+				3517B09023ED646800D23F72 /* MemMap.c in Sources */,
+				3517B03F23ED646800D23F72 /* Touch.c in Sources */,
+				3517B0A323ED646900D23F72 /* FileBuffer.c in Sources */,
+				3517B09923ED646800D23F72 /* EditTitleBar.c in Sources */,
+				3517B03B23ED646800D23F72 /* Type.c in Sources */,
+				3517B0BA23ED646900D23F72 /* SerMode.c in Sources */,
+				3517B05023ED646800D23F72 /* Cp.c in Sources */,
+				3517B04623ED646800D23F72 /* Ifconfig.c in Sources */,
+				3517B0C823ED646900D23F72 /* LibSmbiosView.c in Sources */,
+				3517B09B23ED646800D23F72 /* EditInputBar.c in Sources */,
+				3517B03823ED646800D23F72 /* GetMtc.c in Sources */,
+				3517B06423ED646800D23F72 /* DrvCfg.c in Sources */,
+				3517B06023ED646800D23F72 /* UefiShellBcfgCommandLib.c in Sources */,
+				3517B08D23ED646800D23F72 /* Comp.c in Sources */,
+				3517B07823ED646800D23F72 /* XsdtParser.c in Sources */,
+				3517B04F23ED646800D23F72 /* Goto.c in Sources */,
+				3517B0AF23ED646900D23F72 /* HexEdit.c in Sources */,
+				3517B08223ED646800D23F72 /* IortParser.c in Sources */,
+				3517B05623ED646800D23F72 /* Reset.c in Sources */,
+				3517B0AE23ED646900D23F72 /* MemImage.c in Sources */,
+				3517B03A23ED646800D23F72 /* Help.c in Sources */,
+				3517B08F23ED646800D23F72 /* DmpStore.c in Sources */,
+				3517B06D23ED646800D23F72 /* UefiShellDriver1CommandsLib.c in Sources */,
+				3517B04023ED646800D23F72 /* Pause.c in Sources */,
+				3517B02A23ED646800D23F72 /* Literals.c in Sources */,
+				3517B0A523ED646900D23F72 /* UefiShellDebug1CommandsLib.c in Sources */,
+				3517B0CB23ED646900D23F72 /* UefiShellLib.c in Sources */,
+				3517B0DB23ED646900D23F72 /* ConsoleWrappers.c in Sources */,
+				3517B05C23ED646800D23F72 /* UefiShellLevel2CommandsLib.c in Sources */,
+				3517B05523ED646800D23F72 /* Set.c in Sources */,
+				3517B03C23ED646800D23F72 /* Alias.c in Sources */,
+				3517B03123ED646800D23F72 /* ConsistMapping.c in Sources */,
+				3517B06F23ED646800D23F72 /* Ifconfig6.c in Sources */,
+				3517B0C923ED646900D23F72 /* QueryTable.c in Sources */,
+				3517B05B23ED646800D23F72 /* Mv.c in Sources */,
+				3517B04A23ED646800D23F72 /* Shift.c in Sources */,
+				3517B04423ED646800D23F72 /* Ping.c in Sources */,
+				3517B06923ED646800D23F72 /* OpenInfo.c in Sources */,
+				3517B08623ED646800D23F72 /* AcpiParser.c in Sources */,
+				3517B04323ED646800D23F72 /* UefiShellNetwork1CommandsLib.c in Sources */,
+				3517B07123ED646800D23F72 /* UefiShellNetwork2CommandsLib.c in Sources */,
+				3517B02C23ED646800D23F72 /* Dp.c in Sources */,
+				3517B06723ED646800D23F72 /* DrvDiag.c in Sources */,
+				3517B03223ED646800D23F72 /* UnicodeCollationEng.c in Sources */,
+				3517B07D23ED646800D23F72 /* MadtParser.c in Sources */,
+				3517B07C23ED646800D23F72 /* GtdtParser.c in Sources */,
+				3517B0BD23ED646900D23F72 /* EditStatusBar.c in Sources */,
+				3517B0B223ED646900D23F72 /* DiskImage.c in Sources */,
+				3517B0BB23ED646900D23F72 /* Dblk.c in Sources */,
+				3517B0D923ED646900D23F72 /* ConsoleLogger.c in Sources */,
+				3517B04223ED646800D23F72 /* Echo.c in Sources */,
+				3517B0A023ED646900D23F72 /* Edit.c in Sources */,
+				3517B06123ED646800D23F72 /* DevTree.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		354F73EF22573DE700AB1A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		354F73F022573DE700AB1A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+			};
+			name = Release;
+		};
+		354F73F222573DE700AB1A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		354F73F322573DE700AB1A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		354F73FB22573EBF00AB1A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = MACH_LITTLE_ENDIAN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/UDK/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UDK/ArmPkg/Library/GccLto",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/RELEASE_XCODE31",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/DEBUG_XCODE32",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/RELEASE_XCODE32",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/DEBUG_XCODE31",
+					"$(PROJECT_DIR)/UDK/BaseTools/Source/C/libs",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_CFLAGS = (
+					"-include",
+					"$(SRCROOT)/UDK/MdePkg/Include/Uefi.h",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/UDK/**";
+			};
+			name = Debug;
+		};
+		354F73FC22573EBF00AB1A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = MACH_LITTLE_ENDIAN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/UDK/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UDK/ArmPkg/Library/GccLto",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/RELEASE_XCODE31",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/DEBUG_XCODE32",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/RELEASE_XCODE32",
+					"$(PROJECT_DIR)/UDK/BaseTools/Bin/Darwin-i386/Arm/DEBUG_XCODE31",
+					"$(PROJECT_DIR)/UDK/BaseTools/Source/C/libs",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/DEBUG_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/NOOPT_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/UDK/Build/Shell/RELEASE_XCODE5/X64/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/RELEASE/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/NetworkPkg/Library/DxeNetLib/DxeNetLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeServicesLib/DxeServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseLib/BaseLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePcdLibNull/BasePcdLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeHobLib/DxeHobLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLibOptionalDevicePathProtocol/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/UefiLib/UefiLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BasePrintLib/BasePrintLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/DpDynamicCommand/DpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/DpDynamicCommand/DpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/DynamicCommand/TftpDynamicCommand/TftpApp/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellCEntryLib/UefiShellCEntryLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Library/UefiShellLib/UefiShellLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Application/Shell/Shell/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/ShellPkg/Application/Shell/EA4BB293-2D7F-4456-A681-1F22F42CD0BC/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiSortLib/UefiSortLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib/OUTPUT",
+					"$(PROJECT_DIR)/Binaries/DEBUG/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib/OUTPUT",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_CFLAGS = (
+					"-include",
+					"$(SRCROOT)/UDK/MdePkg/Include/Uefi.h",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/UDK/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		354F73ED22573DE700AB1A9B /* Build configuration list for PBXProject "OpenCoreShell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354F73EF22573DE700AB1A9B /* Debug */,
+				354F73F022573DE700AB1A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354F73F122573DE700AB1A9B /* Build configuration list for PBXLegacyTarget "OpenCoreShell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354F73F222573DE700AB1A9B /* Debug */,
+				354F73F322573DE700AB1A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354F73FA22573EBF00AB1A9B /* Build configuration list for PBXNativeTarget "__OpenCoreShell__index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354F73FB22573EBF00AB1A9B /* Debug */,
+				354F73FC22573EBF00AB1A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 354F73EA22573DE700AB1A9B /* Project object */;
+}
